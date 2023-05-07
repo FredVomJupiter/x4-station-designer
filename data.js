@@ -88,43 +88,58 @@ let sum = {
 let stationModules = {
     modules: [
         {
-            name: "Energy Cell Production",
-            type: "Energy"
+            name: "Energy Cell Module",
+            type: "Energy",
+            input: null,
+            output: {
+                energy: 10500
+            }
         },
         {
-            name: "Terran Energy Cell Production",
-            type: "Energy"
+            name: "Terran Energy Cell Module",
+            type: "Energy",
+            input: null,
+            output: {
+                energy: 3000
+            }
         },
         {
-            name: "Silicon Refinery",
+            name: "Silicon Wafer Module",
+            type: "Refined Goods",
+            input: {
+                silicon: 4800,
+                energy: 1800
+            },
+            output: {
+                siliconWafers: 2140
+            }
+        },
+        {
+            name: "Refined Metal Module",
             type: "Refined Goods"
         },
         {
-            name: "Refined Metal Production",
+            name: "Graphene Module",
             type: "Refined Goods"
         },
         {
-            name: "Graphene Production",
+            name: "BoGas Module",
             type: "Refined Goods"
         },
         {
-            name: "BoGas Production",
+            name: "Superfluid Coolant Module",
             type: "Refined Goods"
         },
         {
-            name: "Superfluid Coolant Production",
+            name: "Antimatter Cell Module",
             type: "Refined Goods"
         },
         {
-            name: "Antimatter Cell Production",
+            name: "Teladianium Module",
             type: "Refined Goods"
         },
         {
-            name: "Teladianium Production",
-            type: "Refined Goods"
-        },
-        {
-            name: "Water Production",
+            name: "Water Module",
             type: "Refined Goods"
         },
         {
@@ -140,199 +155,199 @@ let stationModules = {
             type: "Refined Goods"
         },
         {
-            name: "Meat Production",
+            name: "Meat Module",
             type: "Food"
         },
         {
-            name: "Spice Production",
+            name: "Spice Module",
             type: "Food"
         },
         {
-            name: "Food Rations Production",
+            name: "Food Rations Module",
             type: "Food"
         },
         {
-            name: "Maja Snail Production",
+            name: "Maja Snail Module",
             type: "Food"
         },
         {
-            name: "Soja Bean Production",
+            name: "Soja Bean Module",
             type: "Food"
         },
         {
-            name: "Soja Husk Production",
+            name: "Soja Husk Module",
             type: "Food"
         },
         {
-            name: "Sunrise Flower Production",
+            name: "Sunrise Flower Module",
             type: "Food"
         },
         {
-            name: "Swamp Plant Production",
+            name: "Swamp Plant Module",
             type: "Food"
         },
         {
-            name: "Nostrop Oil Production",
+            name: "Nostrop Oil Module",
             type: "Food"
         },
         {
-            name: "Chelt Meat Production",
+            name: "Chelt Meat Module",
             type: "Food"
         },
         {
-            name: "Scruffin Fruit Production",
+            name: "Scruffin Fruit Module",
             type: "Food"
         },
         {
-            name: "Wheat Production",
+            name: "Wheat Module",
             type: "Food"
         },
         {
-            name: "BoFu Production",
+            name: "BoFu Module",
             type: "Food"
         },
         {
-            name: "Terran MRE Production",
+            name: "Terran MRE Module",
             type: "Food"
         },
         {
-            name: "Plankton Production",
+            name: "Plankton Module",
             type: "Food"
         },
         {
-            name: "Argon Medial Supply Production",
+            name: "Argon Medial Supply Module",
             type: "Medical"
         },
         {
-            name: "Spacefuel Production",
+            name: "Spacefuel Module",
             type: "Medical"
         },
         {
-            name: "Maja Dust Production",
+            name: "Maja Dust Module",
             type: "Medical"
         },
         {
-            name: "Spaceweed Production",
+            name: "Spaceweed Module",
             type: "Medical"
         },
         {
-            name: "Paranid Medical Supply Production",
+            name: "Paranid Medical Supply Module",
             type: "Medical"
         },
         {
-            name: "Teladi Medical Supply Production",
+            name: "Teladi Medical Supply Module",
             type: "Medical"
         },
         {
-            name: "Split Medical Supply Production",
+            name: "Split Medical Supply Module",
             type: "Medical"
         },
         {
-            name: "Terran Medical Supply Production",
+            name: "Terran Medical Supply Module",
             type: "Medical"
         },
         {
-            name: "Stimulant Production",
+            name: "Stimulant Module",
             type: "Medical"
         },
         {
-            name: "Boron Medical Supply Production",
+            name: "Boron Medical Supply Module",
             type: "Medical"
         },
         {
-            name: "Advanced Composite Production",
+            name: "Advanced Composite Module",
             type: "High Tech"
         },
         {
-            name: "Engine Part Production",
+            name: "Engine Part Module",
             type: "High Tech"
         },
         {
-            name: "Hull Part Production",
+            name: "Hull Part Module",
             type: "High Tech"
         },
         {
-            name: "Microchip Production",
+            name: "Microchip Module",
             type: "High Tech"
         },
         {
-            name: "Plasma Conductor Production",
+            name: "Plasma Conductor Module",
             type: "High Tech"
         },
         {
-            name: "Scanning Array Production",
+            name: "Scanning Array Module",
             type: "High Tech"
         },
         {
-            name: "Quantum Tube Production",
+            name: "Quantum Tube Module",
             type: "High Tech"
         },
         {
-            name: "Teladi Advanced Composite Production",
+            name: "Teladi Advanced Composite Module",
             type: "High Tech"
         },
         {
-            name: "Teladi Engine Part Production",
+            name: "Teladi Engine Part Module",
             type: "High Tech"
         },
         {
-            name: "Teladi Hull Part Production",
+            name: "Teladi Hull Part Module",
             type: "High Tech"
         },
         {
-            name: "Teladi Scanning Array Production",
+            name: "Teladi Scanning Array Module",
             type: "High Tech"
         },
         {
-            name: "Computronic Substrate Production",
+            name: "Computronic Substrate Module",
             type: "High Tech"
         },
         {
-            name: "Metallic Microlattice Production",
+            name: "Metallic Microlattice Module",
             type: "High Tech"
         },
         {
-            name: "Silicon Carbide Production",
+            name: "Silicon Carbide Module",
             type: "High Tech"
         },
         {
-            name: "Smart Chip Production",
+            name: "Smart Chip Module",
             type: "Ship Tech"
         },
         {
-            name: "Missile Component Production",
+            name: "Missile Component Module",
             type: "Ship Tech"
         },
         {
-            name: "Drone Component Production",
+            name: "Drone Component Module",
             type: "Ship Tech"
         },
         {
-            name: "Turret Component Production",
+            name: "Turret Component Module",
             type: "Ship Tech"
         },
         {
-            name: "Shield Component Production",
+            name: "Shield Component Module",
             type: "Ship Tech"
         },
         {
-            name: "Weapon Component Production",
+            name: "Weapon Component Module",
             type: "Ship Tech"
         },
         {
-            name: "Claytronics Production",
+            name: "Claytronics Module",
             type: "Ship Tech"
         },
         {
-            name: "Field Coil Production",
+            name: "Field Coil Module",
             type: "Ship Tech"
         },
         {
-            name: "Advanced Electronics Production",
+            name: "Advanced Electronics Module",
             type: "Ship Tech"
         },
         {
-            name: "Antimatter Converter Production",
+            name: "Antimatter Converter Module",
             type: "Ship Tech"
         }
     ]
