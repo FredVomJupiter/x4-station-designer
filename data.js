@@ -84,3 +84,34 @@ let sum = {
     "Missile Comp.": 0,
     "Drone Comp.": 0
 };
+
+let stationModules = {
+    modules: [
+        {
+            name: "Energy Cell Production",
+            type: "Energy"
+        },
+        {
+            name: "Terran Energy Cell Production",
+            type: "Energy"
+        },
+        {
+            name: "Silicon Refinery"
+        },
+        {
+            name: "Refined Metal Production"
+        },
+        {
+            name: "Graphene Production"
+        },
+        {
+            name: "Superfluid Coolant Production"
+        },
+        {
+            name: "Antimatter Cell Production"
+        },
+        {
+            name: "Teladianium Production"
+        }
+    ]
+};
