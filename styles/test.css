@@ -26,6 +26,10 @@ header {
     margin: 0 auto;
 }
 
+.title {
+    font-size: 1.5rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -92,8 +96,8 @@ main {
     gap: 0.25rem;
     margin: 1rem 0rem;
     width: 400px;
+    height: 396px;
     max-width: 500px;
-    max-height: 396px;
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 0.5rem;
