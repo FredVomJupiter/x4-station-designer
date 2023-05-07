@@ -669,55 +669,331 @@ let stationModules = {
         },
         {
             name: "Argon Medial Supply Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Water",
+                    amount: 720
+                },
+                {
+                    name: "Wheat",
+                    amount: 360
+                },
+                {
+                    name: "Spices",
+                    amount: 480
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Medical Supplies",
+                    amount: 2496
+                }
+            ]
         },
         {
             name: "Spacefuel Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Water",
+                    amount: 750
+                },
+                {
+                    name: "Wheat",
+                    amount: 600
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 300
+                }
+            ],
+            output: [
+                {
+                    name: "Spacefuel",
+                    amount: 2640
+                }
+            ]
         },
         {
             name: "Maja Dust Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Spices",
+                    amount: 360
+                },
+                {
+                    name: "Maja Snails",
+                    amount: 720
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 240
+                }
+            ],
+            output: [
+                {
+                    name: "Maja Dust",
+                    amount: 384
+                }
+            ]
         },
         {
             name: "Spaceweed Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Spices",
+                    amount: 240
+                },
+                {
+                    name: "Swamp Plant",
+                    amount: 720
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 840
+                }
+            ],
+            output: [
+                {
+                    name: "Spaceweed",
+                    amount: 1098
+                }
+            ]
         },
         {
             name: "Paranid Medical Supply Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Water",
+                    amount: 720
+                },
+                {
+                    name: "Soja Beans",
+                    amount: 120
+                },
+                {
+                    name: "Spices",
+                    amount: 480
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Medical Supplies",
+                    amount: 2496
+                }
+            ]
         },
         {
             name: "Teladi Medical Supply Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Water",
+                    amount: 720
+                },
+                {
+                    name: "Spices",
+                    amount: 360
+                },
+                {
+                    name: "Sunrise Flowers",
+                    amount: 144
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Medical Supplies",
+                    amount: 2496
+                }
+            ]
         },
         {
             name: "Split Medical Supply Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Water",
+                    amount: 720
+                },
+                {
+                    name: "Spices",
+                    amount: 720
+                },
+                {
+                    name: "Scruffin Fruit",
+                    amount: 360
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Medical Supplies",
+                    amount: 2496
+                }
+            ]
         },
         {
             name: "Terran Medical Supply Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Ice",
+                    amount: 600
+                },
+                {
+                    name: "Protein Paste",
+                    amount: 288
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Medical Supplies",
+                    amount: 1680
+                }
+            ]
         },
         {
             name: "Stimulant Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Helium",
+                    amount: 4800
+                },
+                {
+                    name: "Silicon",
+                    amount: 240
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 960
+                }
+            ],
+            output: [
+                {
+                    name: "Stimulants",
+                    amount: 1176
+                }
+            ]
         },
         {
             name: "Boron Medical Supply Module",
-            type: "Medical"
+            type: "Medical",
+            input: [
+                {
+                    name: "Water",
+                    amount: 720
+                },
+                {
+                    name: "Plankton",
+                    amount: 1140
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Medical Supplies",
+                    amount: 2640
+                }
+            ]
         },
         {
             name: "Advanced Composite Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Graphene",
+                    amount: 960
+                },
+                {
+                    name: "Refined Metals",
+                    amount: 960
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 600
+                }
+            ],
+            output: [
+                {
+                    name: "Advanced Composites",
+                    amount: 648
+                }
+            ]
         },
         {
             name: "Engine Part Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Antimatter Cells",
+                    amount: 320
+                },
+                {
+                    name: "Refined Metals",
+                    amount: 384
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 240
+                }
+            ],
+            output: [
+                {
+                    name: "Engine Parts",
+                    amount: 832
+                }
+            ]
         },
         {
             name: "Hull Part Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Graphene",
+                    amount: 160
+                },
+                {
+                    name: "Refined Metals",
+                    amount: 1120
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 320
+                }
+            ],
+            output: [
+                {
+                    name: "Hull Parts",
+                    amount: 1176
+                }
+            ]
         },
         {
             name: "Microchip Module",
@@ -737,15 +1013,75 @@ let stationModules = {
         },
         {
             name: "Teladi Advanced Composite Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Teladianium",
+                    amount: 696
+                },
+                {
+                    name: "Graphene",
+                    amount: 960
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 600
+                }
+            ],
+            output: [
+                {
+                    name: "Advanced Composites",
+                    amount: 648
+                }
+            ]
         },
         {
             name: "Teladi Engine Part Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Antimatter Cells",
+                    amount: 320
+                },
+                {
+                    name: "Teladianium",
+                    amount: 280
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 240
+                }
+            ],
+            output: [
+                {
+                    name: "Engine Parts",
+                    amount: 832
+                }
+            ]
         },
         {
             name: "Teladi Hull Part Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Graphene",
+                    amount: 160
+                },
+                {
+                    name: "Teladianium",
+                    amount: 816
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 320
+                }
+            ],
+            output: [
+                {
+                    name: "Hull Parts",
+                    amount: 1176
+                }
+            ]
         },
         {
             name: "Teladi Scanning Array Module",
