@@ -1,0 +1,72 @@
+html, body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #293133;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: min(100vw, 1440px);
+    max-height: 100vh;
+    margin: 0 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: fit-content;
+    max-width: 1440px;
+    background: #293133;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modul-buttons-container {
+    
+}
+
+.station-modules {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.resources {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
