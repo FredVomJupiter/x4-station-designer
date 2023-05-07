@@ -1,7 +1,7 @@
 html, body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0 auto;
-    overflow: hidden;
+    background: #6ea4c9;
 }
 
 header {
@@ -21,9 +21,15 @@ header {
 .header-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 1rem;
     width: 1920px;
     max-width: 1920px;
     margin: 0 auto;
+}
+
+.logo {
+    width: 40px;
 }
 
 .title {
@@ -37,7 +43,7 @@ main {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 14rem);
     max-width: min(100vw, 1920px);
     max-height: 100vh;
     margin: 0 auto;
@@ -95,9 +101,8 @@ main {
     flex-direction: column;
     gap: 0.25rem;
     margin: 1rem 0rem;
-    width: 400px;
     height: 396px;
-    max-width: 500px;
+    width: calc(100% - 176px - 1rem); /** 176px = width of modul-buttons-container */
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 0.5rem;
@@ -129,8 +134,46 @@ option:hover {
     width: 33%;
 }
 
+.module-info {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0rem;
+    height: 396px;
+    max-width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 0.5rem;
+    background: #fff;
+    color: #293133;
+}
+
 .details {
     display: flex;
     flex-direction: column;
     width: 33%;
+}
+
+footer {
+    position: relative;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #293133;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    width: 1920px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
