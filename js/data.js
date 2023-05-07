@@ -449,15 +449,71 @@ let stationModules = {
         },
         {
             name: "Soja Husk Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Maja Snails",
+                    amount: 600
+                },
+                {
+                    name: "Soja Beans",
+                    amount: 480
+                },
+                {
+                    name: "Spices",
+                    amount: 240
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 960
+                }
+            ],
+            output: [
+                {
+                    name: "Soja Husk",
+                    amount: 4200
+                }
+            ]
         },
         {
             name: "Sunrise Flower Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 960
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 360
+                }
+            ],
+            output: [
+                {
+                    name: "Sunrise Flowers",
+                    amount: 1200
+                }
+            ]
         },
         {
             name: "Swamp Plant Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 800
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 320
+                }
+            ],
+            output: [
+                {
+                    name: "Swamp Plant",
+                    amount: 960
+                }
+            ]
         },
         {
             name: "Nostrop Oil Module",
