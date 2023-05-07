@@ -96,22 +96,244 @@ let stationModules = {
             type: "Energy"
         },
         {
-            name: "Silicon Refinery"
+            name: "Silicon Refinery",
+            type: "Refined Goods"
         },
         {
-            name: "Refined Metal Production"
+            name: "Refined Metal Production",
+            type: "Refined Goods"
         },
         {
-            name: "Graphene Production"
+            name: "Graphene Production",
+            type: "Refined Goods"
         },
         {
-            name: "Superfluid Coolant Production"
+            name: "BoGas Production",
+            type: "Refined Goods"
         },
         {
-            name: "Antimatter Cell Production"
+            name: "Superfluid Coolant Production",
+            type: "Refined Goods"
         },
         {
-            name: "Teladianium Production"
+            name: "Antimatter Cell Production",
+            type: "Refined Goods"
+        },
+        {
+            name: "Teladianium Production",
+            type: "Refined Goods"
+        },
+        {
+            name: "Water Production",
+            type: "Refined Goods"
+        },
+        {
+            name: "Scrap Recycler",
+            type: "Refined Goods"
+        },
+        {
+            name: "Terran Scrap Recycler",
+            type: "Refined Goods"
+        },
+        {
+            name: "Scrap Processor",
+            type: "Refined Goods"
+        },
+        {
+            name: "Meat Production",
+            type: "Food"
+        },
+        {
+            name: "Spice Production",
+            type: "Food"
+        },
+        {
+            name: "Food Rations Production",
+            type: "Food"
+        },
+        {
+            name: "Maja Snail Production",
+            type: "Food"
+        },
+        {
+            name: "Soja Bean Production",
+            type: "Food"
+        },
+        {
+            name: "Soja Husk Production",
+            type: "Food"
+        },
+        {
+            name: "Sunrise Flower Production",
+            type: "Food"
+        },
+        {
+            name: "Swamp Plant Production",
+            type: "Food"
+        },
+        {
+            name: "Nostrop Oil Production",
+            type: "Food"
+        },
+        {
+            name: "Chelt Meat Production",
+            type: "Food"
+        },
+        {
+            name: "Scruffin Fruit Production",
+            type: "Food"
+        },
+        {
+            name: "Wheat Production",
+            type: "Food"
+        },
+        {
+            name: "BoFu Production",
+            type: "Food"
+        },
+        {
+            name: "Terran MRE Production",
+            type: "Food"
+        },
+        {
+            name: "Plankton Production",
+            type: "Food"
+        },
+        {
+            name: "Argon Medial Supply Production",
+            type: "Medical"
+        },
+        {
+            name: "Spacefuel Production",
+            type: "Medical"
+        },
+        {
+            name: "Maja Dust Production",
+            type: "Medical"
+        },
+        {
+            name: "Spaceweed Production",
+            type: "Medical"
+        },
+        {
+            name: "Paranid Medical Supply Production",
+            type: "Medical"
+        },
+        {
+            name: "Teladi Medical Supply Production",
+            type: "Medical"
+        },
+        {
+            name: "Split Medical Supply Production",
+            type: "Medical"
+        },
+        {
+            name: "Terran Medical Supply Production",
+            type: "Medical"
+        },
+        {
+            name: "Stimulant Production",
+            type: "Medical"
+        },
+        {
+            name: "Boron Medical Supply Production",
+            type: "Medical"
+        },
+        {
+            name: "Advanced Composite Production",
+            type: "High Tech"
+        },
+        {
+            name: "Engine Part Production",
+            type: "High Tech"
+        },
+        {
+            name: "Hull Part Production",
+            type: "High Tech"
+        },
+        {
+            name: "Microchip Production",
+            type: "High Tech"
+        },
+        {
+            name: "Plasma Conductor Production",
+            type: "High Tech"
+        },
+        {
+            name: "Scanning Array Production",
+            type: "High Tech"
+        },
+        {
+            name: "Quantum Tube Production",
+            type: "High Tech"
+        },
+        {
+            name: "Teladi Advanced Composite Production",
+            type: "High Tech"
+        },
+        {
+            name: "Teladi Engine Part Production",
+            type: "High Tech"
+        },
+        {
+            name: "Teladi Hull Part Production",
+            type: "High Tech"
+        },
+        {
+            name: "Teladi Scanning Array Production",
+            type: "High Tech"
+        },
+        {
+            name: "Computronic Substrate Production",
+            type: "High Tech"
+        },
+        {
+            name: "Metallic Microlattice Production",
+            type: "High Tech"
+        },
+        {
+            name: "Silicon Carbide Production",
+            type: "High Tech"
+        },
+        {
+            name: "Smart Chip Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Missile Component Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Drone Component Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Turret Component Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Shield Component Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Weapon Component Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Claytronics Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Field Coil Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Advanced Electronics Production",
+            type: "Ship Tech"
+        },
+        {
+            name: "Antimatter Converter Production",
+            type: "Ship Tech"
         }
     ]
 };
