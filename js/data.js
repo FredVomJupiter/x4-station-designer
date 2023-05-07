@@ -158,7 +158,6 @@ let stationModules = {
                 {
                     name: "Methane",
                     amount: 4800
-
                 },
                 {
                     name: "Energy Cells",
@@ -179,7 +178,6 @@ let stationModules = {
                 {
                     name: "Water",
                     amount: 2400
-
                 },
                 {
                     name: "Energy Cells",
@@ -200,7 +198,6 @@ let stationModules = {
                 {
                     name: "Helium",
                     amount: 4800
-
                 },
                 {
                     name: "Energy Cells",
@@ -221,7 +218,6 @@ let stationModules = {
                 {
                     name: "Hydrogen",
                     amount: 9600
-
                 },
                 {
                     name: "Energy Cells",
@@ -242,7 +238,6 @@ let stationModules = {
                 {
                     name: "Ore",
                     amount: 8400
-
                 },
                 {
                     name: "Energy Cells",
@@ -263,7 +258,6 @@ let stationModules = {
                 {
                     name: "Ice",
                     amount: 9600
-
                 },
                 {
                     name: "Energy Cells",
@@ -284,7 +278,6 @@ let stationModules = {
                 {
                     name: "Scrap Metal",
                     amount: 4500
-
                 },
                 {
                     name: "Energy Cells",
@@ -309,7 +302,6 @@ let stationModules = {
                 {
                     name: "Scrap Metal",
                     amount: 15000
-
                 },
                 {
                     name: "Energy Cells",
@@ -333,40 +325,127 @@ let stationModules = {
             input: [
                 {
                     name: "Raw Scrap Metal",
-                    amount: 0
-
+                    amount: 9300
                 },
                 {
                     name: "Energy Cells",
-                    amount: 0
+                    amount: 90000
                 }
             ],
             output: [
                 {
                     name: "Scrap Metal",
-                    amount: 0
+                    amount: 9300
                 }
             ]
         },
         {
             name: "Meat Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 800
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 640
+                }
+            ],
+            output: [
+                {
+                    name: "Meat",
+                    amount: 2320
+                }
+            ]
         },
         {
             name: "Spice Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 480
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 240
+                }
+            ],
+            output: [
+                {
+                    name: "Spices",
+                    amount: 3000
+                }
+            ]
         },
         {
             name: "Food Rations Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Meat",
+                    amount: 600
+                },
+                {
+                    name: "Spices",
+                    amount: 600
+                },
+                {
+                    name: "Wheat",
+                    amount: 600
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1500
+                }
+            ],
+            output: [
+                {
+                    name: "Food Rations",
+                    amount: 6900
+                }
+            ]
         },
         {
             name: "Maja Snail Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 800
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 320
+                }
+            ],
+            output: [
+                {
+                    name: "Maja Snails",
+                    amount: 1168
+                }
+            ]
         },
         {
             name: "Soja Bean Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 960
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 360
+                }
+            ],
+            output: [
+                {
+                    name: "Soja Beans",
+                    amount: 1248
+                }
+            ]
         },
         {
             name: "Soja Husk Module",
