@@ -2,8 +2,7 @@ function getAllModules() {
     clearModuleList();
     let moduleField = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
-        moduleField.innerHTML += `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
-
+        moduleField.innerHTML += getOptionHTMLTemplate(index);
     }
 }
 
@@ -13,7 +12,7 @@ function getEnergyModules() {
     let moduleField = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Energy') {
-            moduleField.innerHTML += `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
+            moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
 }
@@ -24,7 +23,7 @@ function getRefinedModules() {
     let moduleField = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Refined Goods') {
-            moduleField.innerHTML += `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
+            moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
 }
@@ -35,7 +34,7 @@ function getFoodModules() {
     let moduleField = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Food') {
-            moduleField.innerHTML += `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
+            moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
 }
@@ -46,7 +45,7 @@ function getHighTechModules() {
     let moduleField = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'High Tech') {
-            moduleField.innerHTML += `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
+            moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
 }
@@ -57,7 +56,7 @@ function getMedicalModules() {
     let moduleField = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Medical') {
-            moduleField.innerHTML += `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
+            moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
 }
@@ -68,9 +67,14 @@ function getShipTechModules() {
     let moduleField = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Ship Tech') {
-            moduleField.innerHTML += `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
+            moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
+}
+
+
+function getOptionHTMLTemplate(index) {
+    return `<option value="${stationModules.modules[index].name}">${stationModules.modules[index].name}</option>`;
 }
 
 
