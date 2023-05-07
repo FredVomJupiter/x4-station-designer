@@ -104,7 +104,7 @@ main {
 option {
     padding: 0.5rem 0.5rem;
     cursor: pointer;
-    background-image: url('assets/img/add.svg');
+    background-image: url('../assets/img/add.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem);
 }
@@ -113,7 +113,7 @@ option:hover {
     transition: all 125ms ease-in-out;
     background: #6ea4c9;
     color: #fff;
-    background-image: url('assets/img/add_white.svg');
+    background-image: url('../assets/img/add_white.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem);
 }
