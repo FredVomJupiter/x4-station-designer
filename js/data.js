@@ -186,7 +186,7 @@ let stationModules = {
             ],
             output: [
                 {
-                    name: "Graphene",
+                    name: "BoGas",
                     amount: 2640
                 }
             ]
