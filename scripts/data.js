@@ -91,10 +91,12 @@ let stationModules = {
             name: "Energy Cell Module",
             type: "Energy",
             input: null,
-            output: {
-                outputName: "Energy Cells",
-                energy: 10500
-            }
+            output: [
+                {
+                    name: "Energy Cells",
+                    amount: 10500
+                }
+            ]
         },
         {
             name: "Terran Energy Cell Module",
@@ -102,7 +104,7 @@ let stationModules = {
             input: null,
             output: [
                 {
-                    outputName: "Energy Cells",
+                    name: "Energy Cells",
                     amount: 3000
                 }
             ]
@@ -112,62 +114,239 @@ let stationModules = {
             type: "Refined Goods",
             input: [
                 {
-                    inputName: "Silicon",
+                    name: "Silicon",
                     amount: 4800
 
                 },
                 {
-                    inputName: "Energy Cells",
+                    name: "Energy Cells",
                     amount: 1800
                 }
             ],
             output: [
                 {
-                    outputName: "Silicon Wafers",
+                    name: "Silicon Wafers",
                     amount: 2140
                 }
-
             ]
         },
         {
             name: "Refined Metal Module",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Ore",
+                    amount: 5760
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 2160
+                }
+            ],
+            output: [
+                {
+                    name: "Refined Metals",
+                    amount: 2112
+                }
+            ]
         },
         {
             name: "Graphene Module",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Methane",
+                    amount: 4800
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Graphene",
+                    amount: 1440
+                }
+            ]
         },
         {
             name: "BoGas Module",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Water",
+                    amount: 2400
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 960
+                }
+            ],
+            output: [
+                {
+                    name: "Graphene",
+                    amount: 2640
+                }
+            ]
         },
         {
             name: "Superfluid Coolant Module",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Helium",
+                    amount: 4800
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 900
+                }
+            ],
+            output: [
+                {
+                    name: "Superfluid Coolant",
+                    amount: 1425
+                }
+            ]
         },
         {
             name: "Antimatter Cell Module",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Hydrogen",
+                    amount: 9600
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 3000
+                }
+            ],
+            output: [
+                {
+                    name: "Antimatter Cells",
+                    amount: 2970
+                }
+            ]
         },
         {
             name: "Teladianium Module",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Ore",
+                    amount: 8400
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1350
+                }
+            ],
+            output: [
+                {
+                    name: "Teladianium",
+                    amount: 2100
+                }
+            ]
         },
         {
             name: "Water Module",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Ice",
+                    amount: 9600
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1800
+                }
+            ],
+            output: [
+                {
+                    name: "Water",
+                    amount: 5790
+                }
+            ]
         },
         {
             name: "Scrap Recycler",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Scrap Metal",
+                    amount: 4500
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 186000
+                }
+            ],
+            output: [
+                {
+                    name: "Hull Parts",
+                    amount: 2400
+                },
+                {
+                    name: "Claytronics",
+                    amount: 720
+                }
+            ]
         },
         {
             name: "Terran Scrap Recycler",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Scrap Metal",
+                    amount: 15000
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 198000
+                }
+            ],
+            output: [
+                {
+                    name: "Computronic Substrate",
+                    amount: 600
+                },
+                {
+                    name: "Silicon Carbide",
+                    amount: 720
+                }
+            ]
         },
         {
             name: "Scrap Processor",
-            type: "Refined Goods"
+            type: "Refined Goods",
+            input: [
+                {
+                    name: "Raw Scrap Metal",
+                    amount: 0
+
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 0
+                }
+            ],
+            output: [
+                {
+                    name: "Scrap Metal",
+                    amount: 0
+                }
+            ]
         },
         {
             name: "Meat Module",

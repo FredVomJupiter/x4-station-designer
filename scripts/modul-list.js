@@ -93,15 +93,17 @@ function showModuleDetails(index) {
     moduleInfo.innerHTML += `<span>${stationModules.modules[index].name}</span><br><br>`;
     moduleInfo.innerHTML += `<span>${stationModules.modules[index].type}</span><br><br>`;
     if (stationModules.modules[index].input) {
+        moduleInfo.innerHTML += `<span>Input:</span><br>`;
         stationModules.modules[index].input.forEach(input => {
-            moduleInfo.innerHTML += `<span>${input}</span><br>`;
+            moduleInfo.innerHTML += `<span>${input.name + " " + input.amount}</span><br>`;
         });   
     } else {
         moduleInfo.innerHTML += `<span>Input: None</span><br>`;
     }
     if (stationModules.modules[index].output) {
         stationModules.modules[index].output.forEach(output => {
-            moduleInfo.innerHTML += `<span>${output}</span><br>`;
+            moduleInfo.innerHTML += `<span>Output:</span><br>`;
+            moduleInfo.innerHTML += `<span>${output.name + " " + output.amount}</span><br>`;
         });   
     } else {
         moduleInfo.innerHTML += `<span>Output: None</span><br>`;
