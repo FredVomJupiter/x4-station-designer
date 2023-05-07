@@ -517,31 +517,155 @@ let stationModules = {
         },
         {
             name: "Nostrop Oil Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 720
+                },
+                {
+                    name: "Spices",
+                    amount: 480
+                },
+                {
+                    name: "Sunrise Flowers",
+                    amount: 480
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1200
+                }
+            ],
+            output: [
+                {
+                    name: "Nostrop Oil",
+                    amount: 6000
+                }
+            ]
         },
         {
             name: "Chelt Meat Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 960
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 400
+                }
+            ],
+            output: [
+                {
+                    name: "Chelt Meat",
+                    amount: 1672
+                }
+            ]
         },
         {
             name: "Scruffin Fruit Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 960
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 360
+                }
+            ],
+            output: [
+                {
+                    name: "Scruffin Fruit",
+                    amount: 3060
+                }
+            ]
         },
         {
             name: "Wheat Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 960
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 720
+                }
+            ],
+            output: [
+                {
+                    name: "Wheat",
+                    amount: 3720
+                }
+            ]
         },
         {
             name: "BoFu Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "BoGas",
+                    amount: 600
+                },
+                {
+                    name: "Plankton",
+                    amount: 1800
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 600
+                }
+            ],
+            output: [
+                {
+                    name: "BoFu",
+                    amount: 1230
+                }
+            ]
         },
         {
             name: "Terran MRE Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Protein Paste",
+                    amount: 900
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 900
+                }
+            ],
+            output: [
+                {
+                    name: "Terran MRE",
+                    amount: 2625
+                }
+            ]
         },
         {
             name: "Plankton Module",
-            type: "Food"
+            type: "Food",
+            input: [
+                {
+                    name: "Water",
+                    amount: 450
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 180
+                }
+            ],
+            output: [
+                {
+                    name: "Plankton",
+                    amount: 2475
+                }
+            ]
         },
         {
             name: "Argon Medial Supply Module",
