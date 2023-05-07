@@ -101,8 +101,8 @@ function showModuleDetails(index) {
         moduleInfo.innerHTML += `<span>Input: None</span><br>`;
     }
     if (stationModules.modules[index].output) {
+        moduleInfo.innerHTML += `<span>Output:</span><br>`;
         stationModules.modules[index].output.forEach(output => {
-            moduleInfo.innerHTML += `<span>Output:</span><br>`;
             moduleInfo.innerHTML += `<span>${output.name + " " + output.amount}</span><br>`;
         });   
     } else {
