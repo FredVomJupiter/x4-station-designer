@@ -7,6 +7,7 @@ function getAllModules() {
     for (let index = 0; index < stationModules.modules.length; index++) {
         moduleField.innerHTML += getOptionHTMLTemplate(index);
     }
+    highlightButton("all");
 }
 
 
@@ -18,6 +19,7 @@ function getEnergyModules() {
             moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
+    highlightButton("energy");
 }
 
 
@@ -29,6 +31,7 @@ function getRefinedModules() {
             moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
+    highlightButton("refined");
 }
 
 
@@ -40,6 +43,7 @@ function getFoodModules() {
             moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
+    highlightButton("food");
 }
 
 
@@ -51,6 +55,7 @@ function getHighTechModules() {
             moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
+    highlightButton("hitech");
 }
 
 
@@ -62,6 +67,7 @@ function getMedicalModules() {
             moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
+    highlightButton("medical");
 }
 
 
@@ -73,6 +79,18 @@ function getShipTechModules() {
             moduleField.innerHTML += getOptionHTMLTemplate(index);
         }
     }
+    highlightButton("shiptech");
+}
+
+
+function highlightButton(selectedButton) {
+    let buttons = ["all", "energy", "refined", "food", "hitech", "medical", "shiptech"];
+    buttons.forEach(button => {
+        if (document.getElementById(button).classList.contains("highlight")) {
+            document.getElementById(button).classList.remove("highlight");
+        }
+    });
+    document.getElementById(selectedButton).classList.add("highlight");
 }
 
 /**
@@ -83,7 +101,7 @@ function getShipTechModules() {
  */
 function getOptionHTMLTemplate(index) {
     return `
-            <option value="${stationModules.modules[index].name}" onclick="showModuleDetails(${index})">
+            <option value="${stationModules.modules[index].name}" onclick="showModuleDetails(${index}); addSingleModule(${index})">
             ${stationModules.modules[index].name}</option>
         `;
 }
@@ -104,7 +122,6 @@ function showModuleDetails(index) {
     clearModulInfo();
     setModuleTitle(index);
     setModuleInputOutput(index);
-    insertAddButton(index);
 }
 
 

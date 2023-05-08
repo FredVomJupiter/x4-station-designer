@@ -21,22 +21,35 @@
         </div>
     </header>
     <main>
+
         <div class="main-container">
-            <div class="station-modules">
+
+            <!-- Left Box -->
+            <div class="box">
                 <div class="modul-buttons-container">
-                    <div class="button" onclick="getAllModules()">All</div>
-                    <div class="button" onclick="getEnergyModules()">Energy</div>
-                    <div class="button" onclick="getRefinedModules()">Refined Goods</div>
-                    <div class="button" onclick="getFoodModules()">Food</div>
-                    <div class="button" onclick="getHighTechModules()">Hight Tech</div>
-                    <div class="button" onclick="getMedicalModules()">Medical</div>
-                    <div class="button" onclick="getShipTechModules()">Ship Tech</div>
+                    <div class="button" id="all" onclick="getAllModules()">All</div>
+                    <div class="button" id="energy" onclick="getEnergyModules()">Energy</div>
+                    <div class="button" id="refined" onclick="getRefinedModules()">Refined Goods</div>
+                    <div class="button" id="food" onclick="getFoodModules()">Food</div>
+                    <div class="button" id="hitech" onclick="getHighTechModules()">Hight Tech</div>
+                    <div class="button" id="medical" onclick="getMedicalModules()">Medical</div>
+                    <div class="button" id="shiptech" onclick="getShipTechModules()">Ship Tech</div>
                 </div>
-                <div class="modul-selection-container" id="modulesSelection">
+                <div class="modul-selection-container left-no-borderradius" id="modulesSelection">
 
                 </div>
             </div>
-            <div class="resources">
+            
+            <!-- Middle Box -->
+            <div class="box">
+                <div class="module-counter-container" id="moduleList">
+
+                </div>
+            </div>
+
+            <!-- Right Box -->
+            <div class="box">
+
                 <div class="module-info" id="moduleInfo">
                     <div class="module-title-container" id=moduleTitle>
 
@@ -53,11 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="details">
-                <div class="module-counter-container" id="moduleList">
 
-                </div>
             </div>
         </div>
 

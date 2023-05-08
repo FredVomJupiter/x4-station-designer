@@ -52,28 +52,33 @@ main {
 .main-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     height: fit-content;
     max-width: 1920px;
     background: #293133;
     border-radius: 0.5rem;
     margin: 1rem 0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 0 1rem;
 }
 
-.station-modules {
+.box {
     display: flex;
     flex-direction: row;
     width: 33%;
 }
 
+.left-no-borderradius {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
 .modul-buttons-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 0.5rem;
-    padding: 1rem 1rem;
+    justify-content: space-between;
     border-radius: 0.5rem;
+    margin: 1rem 0;
 }
 
 .button {
@@ -83,15 +88,21 @@ main {
     padding: 0.5rem 0.5rem;
     align-items: center;
     height: 2rem;
-    width: 8rem;
+    width: 100%;
     background: #3c3c3c;
     color: #b3b3b3;
-    border-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
     user-select: none;
 }
 
 .button:hover {
     transition: all 125ms ease-in-out;
+    background: #6ea4c9;
+    color: #fff;
+}
+
+.highlight {
     background: #6ea4c9;
     color: #fff;
 }
@@ -102,7 +113,7 @@ main {
     gap: 0.25rem;
     margin: 1rem 0rem;
     height: 396px;
-    width: calc(100% - 176px - 1rem); /** 176px = width of modul-buttons-container */
+    width: 80%; /** 176px = width of modul-buttons-container */
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 0.5rem;
@@ -127,19 +138,13 @@ option:hover {
     background-position: calc(100% - 1rem);
 }
 
-.resources {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-}
-
 .module-info {
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 1rem 0rem;
     height: 396px;
-    max-width: 100%;
+    width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
     border-radius: 0.5rem;
@@ -196,6 +201,7 @@ option:hover {
     align-items: center;
     gap: 2px;
     font-weight: bold;
+    user-select: none;
 }
 
 .outputs {
@@ -220,19 +226,12 @@ option:hover {
     }
 }
 
-.details {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-}
-
 .module-counter-container {
     display: flex;
     flex-direction: column;
-    margin: 1rem 1rem;
-    margin-right: 0;
+    margin: 1rem 0;
     height: 396px;
-    max-width: 100%;
+    width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
     border-radius: 0.5rem;
