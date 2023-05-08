@@ -283,7 +283,8 @@ let stationModules = {
                     name: "Scrap Metal",
                     amount: 9300
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Meat",
@@ -304,7 +305,8 @@ let stationModules = {
                     name: "Meat",
                     amount: 2320
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Spice",
@@ -325,7 +327,8 @@ let stationModules = {
                     name: "Spices",
                     amount: 3000
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Food Rations",
@@ -354,7 +357,8 @@ let stationModules = {
                     name: "Food Rations",
                     amount: 6900
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Maja Snail",
@@ -375,7 +379,8 @@ let stationModules = {
                     name: "Maja Snails",
                     amount: 1168
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Soja Bean",
@@ -396,7 +401,8 @@ let stationModules = {
                     name: "Soja Beans",
                     amount: 1248
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Soja Husk",
@@ -425,7 +431,8 @@ let stationModules = {
                     name: "Soja Husk",
                     amount: 4200
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Sunrise Flower",
@@ -446,7 +453,8 @@ let stationModules = {
                     name: "Sunrise Flowers",
                     amount: 1200
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Swamp Plant",
@@ -467,7 +475,8 @@ let stationModules = {
                     name: "Swamp Plant",
                     amount: 960
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Nostrop Oil",
@@ -496,7 +505,8 @@ let stationModules = {
                     name: "Nostrop Oil",
                     amount: 6000
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Chelt Meat",
@@ -517,7 +527,8 @@ let stationModules = {
                     name: "Chelt Meat",
                     amount: 1672
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Scruffin Fruit",
@@ -538,7 +549,8 @@ let stationModules = {
                     name: "Scruffin Fruit",
                     amount: 3060
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Wheat",
@@ -559,7 +571,8 @@ let stationModules = {
                     name: "Wheat",
                     amount: 3720
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "BoFu",
@@ -584,7 +597,8 @@ let stationModules = {
                     name: "BoFu",
                     amount: 1230
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Terran MRE",
@@ -605,7 +619,8 @@ let stationModules = {
                     name: "Terran MRE",
                     amount: 2625
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Plankton",
@@ -626,7 +641,8 @@ let stationModules = {
                     name: "Plankton",
                     amount: 2475
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Argon Medial Supply",
@@ -655,7 +671,8 @@ let stationModules = {
                     name: "Medical Supplies",
                     amount: 2496
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Spacefuel",
@@ -680,7 +697,8 @@ let stationModules = {
                     name: "Spacefuel",
                     amount: 2640
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Maja Dust",
@@ -705,7 +723,8 @@ let stationModules = {
                     name: "Maja Dust",
                     amount: 384
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Spaceweed",
@@ -730,7 +749,8 @@ let stationModules = {
                     name: "Spaceweed",
                     amount: 1098
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Paranid Medical Supply",
@@ -759,7 +779,8 @@ let stationModules = {
                     name: "Medical Supplies",
                     amount: 2496
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Teladi Medical Supply",
@@ -788,7 +809,8 @@ let stationModules = {
                     name: "Medical Supplies",
                     amount: 2496
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Split Medical Supply",
@@ -817,7 +839,8 @@ let stationModules = {
                     name: "Medical Supplies",
                     amount: 2496
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Terran Medical Supply",
@@ -842,7 +865,8 @@ let stationModules = {
                     name: "Medical Supplies",
                     amount: 1680
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Stimulant",
@@ -867,7 +891,8 @@ let stationModules = {
                     name: "Stimulants",
                     amount: 1176
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Boron Medical Supply",
@@ -892,7 +917,8 @@ let stationModules = {
                     name: "Medical Supplies",
                     amount: 2640
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Advanced Composite",
@@ -917,7 +943,8 @@ let stationModules = {
                     name: "Advanced Composites",
                     amount: 648
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Engine Part",
@@ -942,7 +969,8 @@ let stationModules = {
                     name: "Engine Parts",
                     amount: 832
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Hull Part",
@@ -967,7 +995,8 @@ let stationModules = {
                     name: "Hull Parts",
                     amount: 1176
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Microchip",
@@ -988,7 +1017,8 @@ let stationModules = {
                     name: "Microchips",
                     amount: 432
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Plasma Conductor",
@@ -1013,7 +1043,8 @@ let stationModules = {
                     name: "Plasma Conductors",
                     amount: 176
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Scanning Array",
@@ -1038,7 +1069,8 @@ let stationModules = {
                     name: "Scanning Arrays",
                     amount: 216
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Quantum Tube",
@@ -1063,7 +1095,8 @@ let stationModules = {
                     name: "Quantum Tubes",
                     amount: 470
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Teladi Advanced Composite",
@@ -1088,7 +1121,8 @@ let stationModules = {
                     name: "Advanced Composites",
                     amount: 648
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Teladi Engine Part",
@@ -1113,7 +1147,8 @@ let stationModules = {
                     name: "Engine Parts",
                     amount: 832
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Teladi Hull Part",
@@ -1138,7 +1173,8 @@ let stationModules = {
                     name: "Hull Parts",
                     amount: 1176
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Teladi Scanning Array",
@@ -1163,7 +1199,8 @@ let stationModules = {
                     name: "Scanning Arrays",
                     amount: 216
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Computronic Substrate",
@@ -1192,7 +1229,8 @@ let stationModules = {
                     name: "Computronic Substrate",
                     amount: 588
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Metallic Microlattice",
@@ -1217,7 +1255,8 @@ let stationModules = {
                     name: "Metallic Microlattice",
                     amount: 3800
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Silicon Carbide",
@@ -1246,7 +1285,8 @@ let stationModules = {
                     name: "Silicon Carbide",
                     amount: 576
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Smart Chip",
@@ -1267,7 +1307,8 @@ let stationModules = {
                     name: "Smart Chips",
                     amount: 858
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Missile Component",
@@ -1292,7 +1333,8 @@ let stationModules = {
                     name: "Missile Components",
                     amount: 1124
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Drone Component",
@@ -1325,7 +1367,8 @@ let stationModules = {
                     name: "Drone Components",
                     amount: 315
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Turret Component",
@@ -1354,7 +1397,8 @@ let stationModules = {
                     name: "Turret Components",
                     amount: 340
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Shield Component",
@@ -1379,7 +1423,8 @@ let stationModules = {
                     name: "Shield Components",
                     amount: 579
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Weapon Component",
@@ -1404,7 +1449,8 @@ let stationModules = {
                     name: "Weapon Components",
                     amount: 340
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Claytronics",
@@ -1433,7 +1479,8 @@ let stationModules = {
                     name: "Claytronics",
                     amount: 432
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Field Coil",
@@ -1458,7 +1505,8 @@ let stationModules = {
                     name: "Field Coils",
                     amount: 1050
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Advanced Electronics",
@@ -1483,7 +1531,8 @@ let stationModules = {
                     name: "Advanced Electronics",
                     amount: 270
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Antimatter Converter",
@@ -1508,7 +1557,8 @@ let stationModules = {
                     name: "Antimatter Converters",
                     amount: 1596
                 }
-            ]
+            ],
+            amount: 0
         }
     ]
 };
