@@ -997,19 +997,95 @@ let stationModules = {
         },
         {
             name: "Microchip Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Silicon Wafers",
+                    amount: 1200
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 300
+                }
+            ],
+            output: [
+                {
+                    name: "Microchips",
+                    amount: 432
+                }
+            ]
         },
         {
             name: "Plasma Conductor Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Graphene",
+                    amount: 384
+                },
+                {
+                    name: "Superfluid Coolant",
+                    amount: 560
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 240
+                }
+            ],
+            output: [
+                {
+                    name: "Plasma Conductors",
+                    amount: 176
+                }
+            ]
         },
         {
             name: "Scanning Array Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Silicon Wafers",
+                    amount: 360
+                },
+                {
+                    name: "Refined Metals",
+                    amount: 600
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 360
+                }
+            ],
+            output: [
+                {
+                    name: "Scanning Arrays",
+                    amount: 216
+                }
+            ]
         },
         {
             name: "Quantum Tube Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Graphene",
+                    amount: 580
+                },
+                {
+                    name: "Superfluid Coolant",
+                    amount: 150
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 200
+                }
+            ],
+            output: [
+                {
+                    name: "Quantum Tubes",
+                    amount: 470
+                }
+            ]
         },
         {
             name: "Teladi Advanced Composite Module",
@@ -1085,59 +1161,372 @@ let stationModules = {
         },
         {
             name: "Teladi Scanning Array Module",
-            type: "High Tech"
+            type: "High Tech",
+            input: [
+                {
+                    name: "Silicon Wafers",
+                    amount: 360
+                },
+                {
+                    name: "Teladianium",
+                    amount: 438
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 360
+                }
+            ],
+            output: [
+                {
+                    name: "Scanning Arrays",
+                    amount: 216
+                }
+            ]
         },
         {
             name: "Computronic Substrate Module",
-            type: "High Tech"
+            type: "High Tech",
+            style: "Terran",
+            input: [
+                {
+                    name: "Hydrogen",
+                    amount: 12000
+                },
+                {
+                    name: "Ore",
+                    amount: 18000
+                },
+                {
+                    name: "Silicon",
+                    amount: 18000
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 24000
+                }
+            ],
+            output: [
+                {
+                    name: "Computronic Substrate",
+                    amount: 588
+                }
+            ]
         },
         {
             name: "Metallic Microlattice Module",
-            type: "High Tech"
+            type: "High Tech",
+            style: "Terran",
+            input: [
+                {
+                    name: "Helium",
+                    amount: 2600
+                },
+                {
+                    name: "Ore",
+                    amount: 1000
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 1000
+                }
+            ],
+            output: [
+                {
+                    name: "Metallic Microlattice",
+                    amount: 3800
+                }
+            ]
         },
         {
             name: "Silicon Carbide Module",
-            type: "High Tech"
+            type: "High Tech",
+            style: "Terran",
+            input: [
+                {
+                    name: "Methane",
+                    amount: 12000
+                },
+                {
+                    name: "Metallic Microlattice",
+                    amount: 24
+                },
+                {
+                    name: "Silicon",
+                    amount: 3600
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 2400
+                }
+            ],
+            output: [
+                {
+                    name: "Silicon Carbide",
+                    amount: 576
+                }
+            ]
         },
         {
             name: "Smart Chip Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Silicon Wafers",
+                    amount: 120
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 300
+                }
+            ],
+            output: [
+                {
+                    name: "Smart Chips",
+                    amount: 858
+                }
+            ]
         },
         {
             name: "Missile Component Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Hull Parts",
+                    amount: 8
+                },
+                {
+                    name: "Advanced Composites",
+                    amount: 8
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 80
+                }
+            ],
+            output: [
+                {
+                    name: "Missile Components",
+                    amount: 1124
+                }
+            ]
         },
         {
             name: "Drone Component Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Engine Parts",
+                    amount: 60
+                },
+                {
+                    name: "Hull Parts",
+                    amount: 60
+                },
+                {
+                    name: "Microchips",
+                    amount: 60
+                },
+                {
+                    name: "Scanning Arrays",
+                    amount: 120
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 180
+                }
+            ],
+            output: [
+                {
+                    name: "Drone Components",
+                    amount: 315
+                }
+            ]
         },
         {
             name: "Turret Component Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Microchips",
+                    amount: 40
+                },
+                {
+                    name: "Quantum Tubes",
+                    amount: 40
+                },
+                {
+                    name: "Scanning Arrays",
+                    amount: 20
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 120
+                }
+            ],
+            output: [
+                {
+                    name: "Turret Components",
+                    amount: 340
+                }
+            ]
         },
         {
             name: "Shield Component Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Plasma Conductors",
+                    amount: 60
+                },
+                {
+                    name: "Quantum Tubes",
+                    amount: 60
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 210
+                }
+            ],
+            output: [
+                {
+                    name: "Shield Components",
+                    amount: 579
+                }
+            ]
         },
         {
             name: "Weapon Component Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Hull Parts",
+                    amount: 40
+                },
+                {
+                    name: "Plasma Conductors",
+                    amount: 60
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 120
+                }
+            ],
+            output: [
+                {
+                    name: "Weapon Components",
+                    amount: 340
+                }
+            ]
         },
         {
             name: "Claytronics Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Antimatter Cells",
+                    amount: 400
+                },
+                {
+                    name: "Microchips",
+                    amount: 640
+                },
+                {
+                    name: "Quantum Tubes",
+                    amount: 400
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 560
+                }
+            ],
+            output: [
+                {
+                    name: "Claytronics",
+                    amount: 432
+                }
+            ]
         },
         {
             name: "Field Coil Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Plasma Conductors",
+                    amount: 240
+                },
+                {
+                    name: "Quantum Tubes",
+                    amount: 258
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 360
+                }
+            ],
+            output: [
+                {
+                    name: "Field Coils",
+                    amount: 1050
+                }
+            ]
         },
         {
             name: "Advanced Electronics Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Microchips",
+                    amount: 220
+                },
+                {
+                    name: "Quantum Tubes",
+                    amount: 100
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 300
+                }
+            ],
+            output: [
+                {
+                    name: "Advanced Electronics",
+                    amount: 270
+                }
+            ]
         },
         {
             name: "Antimatter Converter Module",
-            type: "Ship Tech"
+            type: "Ship Tech",
+            style: "Default",
+            input: [
+                {
+                    name: "Advanced Composites",
+                    amount: 240
+                },
+                {
+                    name: "Microchips",
+                    amount: 360
+                },
+                {
+                    name: "Energy Cells",
+                    amount: 960
+                }
+            ],
+            output: [
+                {
+                    name: "Antimatter Converters",
+                    amount: 1596
+                }
+            ]
         }
     ]
 };
