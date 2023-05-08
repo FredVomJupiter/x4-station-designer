@@ -1,7 +1,7 @@
 html, body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0 auto;
-    background: #161616;
+    background: #7a7a7a;
 }
 
 header {
@@ -36,6 +36,7 @@ header {
     font-size: 1.5rem;
 }
 
+/* Main Content */
 main {
     display: flex;
     flex-direction: column;
@@ -50,16 +51,18 @@ main {
 }
 
 .main-container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: fit-content;
+    height: 480px;
+    max-height: 480px;
     max-width: 1920px;
     background: #293133;
     border-radius: 0.5rem;
     margin: 1rem 0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    padding: 0 1rem;
+    padding: 1rem 1rem;
 }
 
 .box {
@@ -68,17 +71,11 @@ main {
     width: 33%;
 }
 
-.left-no-borderradius {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-}
-
 .modul-buttons-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0.5rem;
-    margin: 1rem 0;
 }
 
 .button {
@@ -87,38 +84,42 @@ main {
     flex-direction: row;
     padding: 0.5rem 0.5rem;
     align-items: center;
-    height: 2rem;
+    height: 3rem;
     width: 100%;
-    background: #3c3c3c;
-    color: #b3b3b3;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    background: #7a7a7a;
+    color: #ffffff;
     user-select: none;
 }
 
 .button:hover {
     transition: all 125ms ease-in-out;
     background: #6ea4c9;
-    color: #fff;
+}
+
+.border-radius-top {
+    border-top-left-radius: 0.5rem;
+}
+
+.border-radius-bottom {
+    border-bottom-left-radius: 0.5rem;
 }
 
 .highlight {
     background: #6ea4c9;
-    color: #fff;
 }
 
+/* Left container */
 .modul-selection-container {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    margin: 1rem 0rem;
-    height: 396px;
-    width: 80%; /** 176px = width of modul-buttons-container */
+    height: 100%;
+    width: 80%;
     overflow-y: scroll;
     overflow-x: hidden;
-    border-radius: 0.5rem;
     background: #7a7a7a;
     color: #293133;
+    border-left: 2px solid #293133;
 }
 
 option {
@@ -138,33 +139,19 @@ option:hover {
     background-position: calc(100% - 1rem);
 }
 
+/* Right container */
 .module-info {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 1rem 0rem;
-    height: 396px;
+    height: 100%;
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
-    border-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     background: #7a7a7a;
     color: #293133;
-}
-
-.add-button {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    display: flex;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background:#293133;
-    background-image: url('../assets/img/add_white.svg');
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .module-title-container {
@@ -226,19 +213,19 @@ option:hover {
     }
 }
 
+/* Middle container */
 .module-counter-container {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
-    height: 396px;
+    height: 100%;
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
-    border-radius: 0.5rem;
     background: #7a7a7a;
     color: #293133;
 }
 
+/* FOOTER */
 footer {
     position: relative;
     height: 10rem;
