@@ -225,9 +225,22 @@ option:hover {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    padding: 1rem;
     overflow: scroll;
     background: #E4EFF0;
+    color: #002439;
+}
+
+.listed-module {
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+}
+
+.listed-module:hover {
+    background: #78CCE2;
     color: #002439;
 }
 
