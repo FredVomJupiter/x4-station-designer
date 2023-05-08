@@ -90,6 +90,7 @@ let stationModules = {
         {
             name: "Energy Cell Module",
             type: "Energy",
+            style: "Default",
             input: null,
             output: [
                 {
@@ -101,6 +102,7 @@ let stationModules = {
         {
             name: "Terran Energy Cell Module",
             type: "Energy",
+            style: "Terran",
             input: null,
             output: [
                 {
@@ -112,6 +114,7 @@ let stationModules = {
         {
             name: "Silicon Wafer Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Silicon",
@@ -133,6 +136,7 @@ let stationModules = {
         {
             name: "Refined Metal Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Ore",
@@ -154,6 +158,7 @@ let stationModules = {
         {
             name: "Graphene Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Methane",
@@ -174,6 +179,7 @@ let stationModules = {
         {
             name: "BoGas Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -194,6 +200,7 @@ let stationModules = {
         {
             name: "Superfluid Coolant Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Helium",
@@ -214,6 +221,7 @@ let stationModules = {
         {
             name: "Antimatter Cell Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Hydrogen",
@@ -234,6 +242,7 @@ let stationModules = {
         {
             name: "Teladianium Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Ore",
@@ -254,6 +263,7 @@ let stationModules = {
         {
             name: "Water Module",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Ice",
@@ -274,6 +284,7 @@ let stationModules = {
         {
             name: "Scrap Recycler",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Scrap Metal",
@@ -298,6 +309,7 @@ let stationModules = {
         {
             name: "Terran Scrap Recycler",
             type: "Refined Goods",
+            style: "Terran",
             input: [
                 {
                     name: "Scrap Metal",
@@ -322,6 +334,7 @@ let stationModules = {
         {
             name: "Scrap Processor",
             type: "Refined Goods",
+            style: "Default",
             input: [
                 {
                     name: "Raw Scrap Metal",
@@ -342,6 +355,7 @@ let stationModules = {
         {
             name: "Meat Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -362,6 +376,7 @@ let stationModules = {
         {
             name: "Spice Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -382,6 +397,7 @@ let stationModules = {
         {
             name: "Food Rations Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Meat",
@@ -410,6 +426,7 @@ let stationModules = {
         {
             name: "Maja Snail Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -430,6 +447,7 @@ let stationModules = {
         {
             name: "Soja Bean Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -450,6 +468,7 @@ let stationModules = {
         {
             name: "Soja Husk Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Maja Snails",
@@ -478,6 +497,7 @@ let stationModules = {
         {
             name: "Sunrise Flower Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -498,6 +518,7 @@ let stationModules = {
         {
             name: "Swamp Plant Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -518,6 +539,7 @@ let stationModules = {
         {
             name: "Nostrop Oil Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -546,6 +568,7 @@ let stationModules = {
         {
             name: "Chelt Meat Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -566,6 +589,7 @@ let stationModules = {
         {
             name: "Scruffin Fruit Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -586,6 +610,7 @@ let stationModules = {
         {
             name: "Wheat Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -606,6 +631,7 @@ let stationModules = {
         {
             name: "BoFu Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "BoGas",
@@ -630,6 +656,7 @@ let stationModules = {
         {
             name: "Terran MRE Module",
             type: "Food",
+            style: "Terran",
             input: [
                 {
                     name: "Protein Paste",
@@ -650,6 +677,7 @@ let stationModules = {
         {
             name: "Plankton Module",
             type: "Food",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -670,6 +698,7 @@ let stationModules = {
         {
             name: "Argon Medial Supply Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -698,6 +727,7 @@ let stationModules = {
         {
             name: "Spacefuel Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -722,6 +752,7 @@ let stationModules = {
         {
             name: "Maja Dust Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Spices",
@@ -746,6 +777,7 @@ let stationModules = {
         {
             name: "Spaceweed Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Spices",
@@ -770,6 +802,7 @@ let stationModules = {
         {
             name: "Paranid Medical Supply Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -798,6 +831,7 @@ let stationModules = {
         {
             name: "Teladi Medical Supply Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -826,6 +860,7 @@ let stationModules = {
         {
             name: "Split Medical Supply Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -854,6 +889,7 @@ let stationModules = {
         {
             name: "Terran Medical Supply Module",
             type: "Medical",
+            style: "Terran",
             input: [
                 {
                     name: "Ice",
@@ -878,6 +914,7 @@ let stationModules = {
         {
             name: "Stimulant Module",
             type: "Medical",
+            style: "Terran",
             input: [
                 {
                     name: "Helium",
@@ -902,6 +939,7 @@ let stationModules = {
         {
             name: "Boron Medical Supply Module",
             type: "Medical",
+            style: "Default",
             input: [
                 {
                     name: "Water",
@@ -926,6 +964,7 @@ let stationModules = {
         {
             name: "Advanced Composite Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Graphene",
@@ -950,6 +989,7 @@ let stationModules = {
         {
             name: "Engine Part Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Antimatter Cells",
@@ -974,6 +1014,7 @@ let stationModules = {
         {
             name: "Hull Part Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Graphene",
@@ -998,6 +1039,7 @@ let stationModules = {
         {
             name: "Microchip Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Silicon Wafers",
@@ -1018,6 +1060,7 @@ let stationModules = {
         {
             name: "Plasma Conductor Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Graphene",
@@ -1042,6 +1085,7 @@ let stationModules = {
         {
             name: "Scanning Array Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Silicon Wafers",
@@ -1066,6 +1110,7 @@ let stationModules = {
         {
             name: "Quantum Tube Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Graphene",
@@ -1090,6 +1135,7 @@ let stationModules = {
         {
             name: "Teladi Advanced Composite Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Teladianium",
@@ -1114,6 +1160,7 @@ let stationModules = {
         {
             name: "Teladi Engine Part Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Antimatter Cells",
@@ -1138,6 +1185,7 @@ let stationModules = {
         {
             name: "Teladi Hull Part Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Graphene",
@@ -1162,6 +1210,7 @@ let stationModules = {
         {
             name: "Teladi Scanning Array Module",
             type: "High Tech",
+            style: "Default",
             input: [
                 {
                     name: "Silicon Wafers",
