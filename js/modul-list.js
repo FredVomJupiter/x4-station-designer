@@ -1,22 +1,19 @@
-let selectedModules = [];
-
-
 function getAllModules() {
-    clearModuleList();
-    let moduleField = document.getElementById('modulesSelection');
+    clearListOfModules();
+    let list = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
-        moduleField.innerHTML += getOptionHTMLTemplate(index);
+        list.innerHTML += getOptionHTMLTemplate(index);
     }
     highlightButton("all");
 }
 
 
 function getEnergyModules() {
-    clearModuleList();
-    let moduleField = document.getElementById('modulesSelection');
+    clearListOfModules();
+    let list = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Energy') {
-            moduleField.innerHTML += getOptionHTMLTemplate(index);
+            list.innerHTML += getOptionHTMLTemplate(index);
         }
     }
     highlightButton("energy");
@@ -24,11 +21,11 @@ function getEnergyModules() {
 
 
 function getRefinedModules() {
-    clearModuleList();
-    let moduleField = document.getElementById('modulesSelection');
+    clearListOfModules();
+    let list = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Refined Goods') {
-            moduleField.innerHTML += getOptionHTMLTemplate(index);
+            list.innerHTML += getOptionHTMLTemplate(index);
         }
     }
     highlightButton("refined");
@@ -36,11 +33,11 @@ function getRefinedModules() {
 
 
 function getFoodModules() {
-    clearModuleList();
-    let moduleField = document.getElementById('modulesSelection');
+    clearListOfModules();
+    let list = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Food') {
-            moduleField.innerHTML += getOptionHTMLTemplate(index);
+            list.innerHTML += getOptionHTMLTemplate(index);
         }
     }
     highlightButton("food");
@@ -48,11 +45,11 @@ function getFoodModules() {
 
 
 function getHighTechModules() {
-    clearModuleList();
-    let moduleField = document.getElementById('modulesSelection');
+    clearListOfModules();
+    let list = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'High Tech') {
-            moduleField.innerHTML += getOptionHTMLTemplate(index);
+            list.innerHTML += getOptionHTMLTemplate(index);
         }
     }
     highlightButton("hitech");
@@ -60,11 +57,11 @@ function getHighTechModules() {
 
 
 function getMedicalModules() {
-    clearModuleList();
-    let moduleField = document.getElementById('modulesSelection');
+    clearListOfModules();
+    let list = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Medical') {
-            moduleField.innerHTML += getOptionHTMLTemplate(index);
+            list.innerHTML += getOptionHTMLTemplate(index);
         }
     }
     highlightButton("medical");
@@ -72,11 +69,11 @@ function getMedicalModules() {
 
 
 function getShipTechModules() {
-    clearModuleList();
-    let moduleField = document.getElementById('modulesSelection');
+    clearListOfModules();
+    let list = document.getElementById('modulesSelection');
     for (let index = 0; index < stationModules.modules.length; index++) {
         if (stationModules.modules[index].type === 'Ship Tech') {
-            moduleField.innerHTML += getOptionHTMLTemplate(index);
+            list.innerHTML += getOptionHTMLTemplate(index);
         }
     }
     highlightButton("shiptech");
@@ -112,9 +109,9 @@ function getOptionHTMLTemplate(index) {
 /**
  * Clears the module list container on the left.
  */
-function clearModuleList() {
-    let moduleField = document.getElementById('modulesSelection');
-    moduleField.innerHTML = '';
+function clearListOfModules() {
+    let list = document.getElementById('modulesSelection');
+    list.innerHTML = '';
 }
 
 /**
@@ -230,22 +227,25 @@ function clearModulInfo() {
  * @param {*} index as number.
  */
 function addSingleModule(index) {
-    selectedModules.push(index);
+    stationModules.modules[index].amount++
     drawModuleList();
 }
 
-
+/**
+ * Only draws modules from stationModules.modules with amount > 0  into the moduleList.
+ */
 function drawModuleList() {
     clearModuleList();
-    selectedModules.sort((a, b) => (a - b));
     let moduleList = document.getElementById('moduleList');
-    selectedModules.forEach(function(module, index) {
-       moduleList.innerHTML += `
-            <div class="listed-module">
-                <div>${stationModules.modules[selectedModules[index]].name}</div>
-                <div></div>
-            </div>
-       `;
+    stationModules.modules.forEach(function (module, index) {
+        if (module.amount > 0) {
+            moduleList.innerHTML += `
+                <div class="listed-module" onclick="showModuleDetails(${index})">
+                    <div>${module.amount} x ${module.name}</div>
+                    <img src="../assets/img/info.svg">
+                </div>
+            `;
+        }
     });
 }
 

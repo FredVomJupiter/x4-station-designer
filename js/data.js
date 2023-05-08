@@ -97,7 +97,8 @@ let stationModules = {
                     name: "Energy Cells",
                     amount: 10500
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Terran Energy Cell",
@@ -109,7 +110,8 @@ let stationModules = {
                     name: "Energy Cells",
                     amount: 3000
                 }
-            ]
+            ],
+            amount: 0
         },
         {
             name: "Silicon Wafer",
