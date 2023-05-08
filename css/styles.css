@@ -1,7 +1,7 @@
 html, body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0 auto;
-    background: #7a7a7a;
+    background: #b3b3b3;
 }
 
 header {
@@ -14,14 +14,16 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #293133;
-    color: #b3b3b3;
+    color: #ffffff;
     margin: 0 auto;
 }
 
 .header-container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 1rem;
     gap: 1rem;
     width: 1920px;
     max-width: 1920px;
@@ -59,7 +61,7 @@ main {
     max-height: 480px;
     max-width: 1920px;
     background: #293133;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     margin: 1rem 0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     padding: 1rem 1rem;
@@ -74,6 +76,7 @@ main {
 .modul-buttons-container {
     display: flex;
     flex-direction: column;
+    width: 20%;
     justify-content: space-between;
     border-radius: 0.5rem;
 }
@@ -84,16 +87,18 @@ main {
     flex-direction: row;
     padding: 0.5rem 0.5rem;
     align-items: center;
-    height: 3rem;
+    height: 2.47rem;
     width: 100%;
     background: #7a7a7a;
     color: #ffffff;
     user-select: none;
+    border: 2px solid #7a7a7a;
 }
 
 .button:hover {
     transition: all 125ms ease-in-out;
     background: #6ea4c9;
+    border: 2px solid #6ea4c9;
 }
 
 .border-radius-top {
@@ -106,6 +111,7 @@ main {
 
 .highlight {
     background: #6ea4c9;
+    border: 2px solid #6ea4c9;
 }
 
 /* Left container */
@@ -118,14 +124,14 @@ main {
     overflow-y: scroll;
     overflow-x: hidden;
     background: #7a7a7a;
-    color: #293133;
-    border-left: 2px solid #293133;
+    border-left: 4px solid #293133;
 }
 
 option {
     padding: 0.5rem 0.5rem;
+    color: #ffffff;
     cursor: pointer;
-    background-image: url('../assets/img/add.svg');
+    background-image: url('../assets/img/add_white.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem);
 }
@@ -133,7 +139,6 @@ option {
 option:hover {
     transition: all 125ms ease-in-out;
     background: #6ea4c9;
-    color: #fff;
     background-image: url('../assets/img/add_white.svg');
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem);
@@ -215,10 +220,12 @@ option:hover {
 
 /* Middle container */
 .module-counter-container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
+    padding: 1rem;
     overflow-y: hidden;
     overflow-x: hidden;
     background: #7a7a7a;
@@ -239,10 +246,12 @@ footer {
 }
 
 .footer-container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     width: 1920px;
     max-width: 1920px;
+    padding-left: 1rem;
     margin: 0 auto;
 }
 

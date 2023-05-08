@@ -82,7 +82,10 @@ function getShipTechModules() {
     highlightButton("shiptech");
 }
 
-
+/**
+ * Removes highlighting from all buttons and then highlights the selected button.
+ * @param {*} selectedButton as string.
+ */
 function highlightButton(selectedButton) {
     let buttons = ["all", "energy", "refined", "food", "hitech", "medical", "shiptech"];
     buttons.forEach(button => {
@@ -124,7 +127,6 @@ function showModuleDetails(index) {
     setModuleInputOutput(index);
 }
 
-
 /**
  * Fills the title area of the module info container in the middle.
  * @param {*} index as number.
@@ -156,7 +158,7 @@ function handleInputs(index) {
         });
         printDashes();
     } else {
-        moduleInputs.innerHTML += `<span style="font-weight: bold">Input: Love and Sunshine</span><br>`;
+        moduleInputs.innerHTML += `<span style="font-weight: bold">Input:<br>Love and Sunshine</span><br>`;
         printDashes();
     }
 }
@@ -170,7 +172,7 @@ function handleOutputs(index) {
             moduleOutputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount) + "<br>" + output.name}</span><br>`;
         });
     } else {
-        moduleOutputs.innerHTML += `<span style="font-weight: bold">Output: None</span><br>`;
+        moduleOutputs.innerHTML += `<span style="font-weight: bold">Output:<br>None</span><br>`;
     }
 }
 
@@ -195,6 +197,7 @@ function printDashes() {
     }
 }
 
+
 function insertAddButton(index) {
     let moduleInfo = document.getElementById('moduleInfo');
     moduleInfo.innerHTML += `<div class="add-button" onclick="addSingleModule(${index})"></div>`;
@@ -211,14 +214,17 @@ function clearModulInfo() {
     });
 }
 
-
+/**
+ * Adds a single module to the module list in the middle.
+ * @param {*} index as number.
+ */
 function addSingleModule(index) {
     modules.push(index);
     let moduleList = document.getElementById('moduleList');
     moduleList.innerHTML = "";
     modules.forEach(index => {
         moduleList.innerHTML += `
-            <div style="display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: row;" onclick="showModuleDetails(${index})">
                 <span>${stationModules.modules[index].name}</span>
                 <div></div>
             </div>
