@@ -92,6 +92,7 @@ function showModuleDetails(index) {
     let moduleInfo = document.getElementById('moduleInfo');
     moduleInfo.innerHTML += `<span>${stationModules.modules[index].name}</span><br><br>`;
     moduleInfo.innerHTML += `<span>${stationModules.modules[index].type}</span><br><br>`;
+    moduleInfo.innerHTML += `<span>Build style: ${stationModules.modules[index].style}</span><br><br>`;
     if (stationModules.modules[index].input) {
         moduleInfo.innerHTML += `<span>Input:</span><br>`;
         stationModules.modules[index].input.forEach(input => {
