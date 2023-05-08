@@ -124,6 +124,7 @@ function clearModuleList() {
 function showModuleDetails(index) {
     clearModulInfo();
     setModuleTitle(index);
+    showHiddenInputOutput();
     setModuleInputOutput(index);
 }
 
@@ -137,6 +138,16 @@ function setModuleTitle(index) {
         <span>${stationModules.modules[index].name} Module</span><br><br>
         <span style="font-size: 1rem">${stationModules.modules[index].type}</span><br><br>
     `;
+}
+
+/**
+ * Removes d-none class from input and output container.
+ */
+function showHiddenInputOutput() {
+    let moduleInputs = document.getElementById('inputs');
+    let moduleOutputs = document.getElementById('outputs');
+    moduleInputs.style.display = "flex";
+    moduleOutputs.style.display = "flex";
 }
 
 /**

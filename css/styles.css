@@ -259,3 +259,7 @@ a {
     text-decoration: none;
     color: #b3b3b3;
 }
+
+.d-none {
+    display: none;
+}
