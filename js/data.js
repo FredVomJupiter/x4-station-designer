@@ -88,7 +88,7 @@ let sum = {
 let stationModules = {
     modules: [
         {
-            name: "Energy Cell Module",
+            name: "Energy Cell",
             type: "Energy",
             style: "Default",
             input: null,
@@ -100,7 +100,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Terran Energy Cell Module",
+            name: "Terran Energy Cell",
             type: "Energy",
             style: "Terran",
             input: null,
@@ -112,7 +112,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Silicon Wafer Module",
+            name: "Silicon Wafer",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -134,7 +134,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Refined Metal Module",
+            name: "Refined Metal",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -156,7 +156,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Graphene Module",
+            name: "Graphene",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -177,7 +177,7 @@ let stationModules = {
             ]
         },
         {
-            name: "BoGas Module",
+            name: "BoGas",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -198,7 +198,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Superfluid Coolant Module",
+            name: "Superfluid Coolant",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -219,7 +219,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Antimatter Cell Module",
+            name: "Antimatter Cell",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -240,7 +240,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Teladianium Module",
+            name: "Teladianium",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -261,7 +261,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Water Module",
+            name: "Water",
             type: "Refined Goods",
             style: "Default",
             input: [
@@ -353,7 +353,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Meat Module",
+            name: "Meat",
             type: "Food",
             style: "Default",
             input: [
@@ -374,7 +374,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Spice Module",
+            name: "Spice",
             type: "Food",
             style: "Default",
             input: [
@@ -395,7 +395,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Food Rations Module",
+            name: "Food Rations",
             type: "Food",
             style: "Default",
             input: [
@@ -424,7 +424,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Maja Snail Module",
+            name: "Maja Snail",
             type: "Food",
             style: "Default",
             input: [
@@ -445,7 +445,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Soja Bean Module",
+            name: "Soja Bean",
             type: "Food",
             style: "Default",
             input: [
@@ -466,7 +466,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Soja Husk Module",
+            name: "Soja Husk",
             type: "Food",
             style: "Default",
             input: [
@@ -495,7 +495,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Sunrise Flower Module",
+            name: "Sunrise Flower",
             type: "Food",
             style: "Default",
             input: [
@@ -516,7 +516,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Swamp Plant Module",
+            name: "Swamp Plant",
             type: "Food",
             style: "Default",
             input: [
@@ -537,7 +537,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Nostrop Oil Module",
+            name: "Nostrop Oil",
             type: "Food",
             style: "Default",
             input: [
@@ -566,7 +566,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Chelt Meat Module",
+            name: "Chelt Meat",
             type: "Food",
             style: "Default",
             input: [
@@ -587,7 +587,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Scruffin Fruit Module",
+            name: "Scruffin Fruit",
             type: "Food",
             style: "Default",
             input: [
@@ -608,7 +608,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Wheat Module",
+            name: "Wheat",
             type: "Food",
             style: "Default",
             input: [
@@ -629,7 +629,7 @@ let stationModules = {
             ]
         },
         {
-            name: "BoFu Module",
+            name: "BoFu",
             type: "Food",
             style: "Default",
             input: [
@@ -654,7 +654,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Terran MRE Module",
+            name: "Terran MRE",
             type: "Food",
             style: "Terran",
             input: [
@@ -675,7 +675,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Plankton Module",
+            name: "Plankton",
             type: "Food",
             style: "Default",
             input: [
@@ -696,7 +696,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Argon Medial Supply Module",
+            name: "Argon Medial Supply",
             type: "Medical",
             style: "Default",
             input: [
@@ -725,7 +725,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Spacefuel Module",
+            name: "Spacefuel",
             type: "Medical",
             style: "Default",
             input: [
@@ -750,7 +750,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Maja Dust Module",
+            name: "Maja Dust",
             type: "Medical",
             style: "Default",
             input: [
@@ -775,7 +775,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Spaceweed Module",
+            name: "Spaceweed",
             type: "Medical",
             style: "Default",
             input: [
@@ -800,7 +800,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Paranid Medical Supply Module",
+            name: "Paranid Medical Supply",
             type: "Medical",
             style: "Default",
             input: [
@@ -829,7 +829,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Teladi Medical Supply Module",
+            name: "Teladi Medical Supply",
             type: "Medical",
             style: "Default",
             input: [
@@ -858,7 +858,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Split Medical Supply Module",
+            name: "Split Medical Supply",
             type: "Medical",
             style: "Default",
             input: [
@@ -887,7 +887,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Terran Medical Supply Module",
+            name: "Terran Medical Supply",
             type: "Medical",
             style: "Terran",
             input: [
@@ -912,7 +912,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Stimulant Module",
+            name: "Stimulant",
             type: "Medical",
             style: "Terran",
             input: [
@@ -937,7 +937,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Boron Medical Supply Module",
+            name: "Boron Medical Supply",
             type: "Medical",
             style: "Default",
             input: [
@@ -962,7 +962,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Advanced Composite Module",
+            name: "Advanced Composite",
             type: "High Tech",
             style: "Default",
             input: [
@@ -987,7 +987,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Engine Part Module",
+            name: "Engine Part",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1012,7 +1012,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Hull Part Module",
+            name: "Hull Part",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1037,7 +1037,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Microchip Module",
+            name: "Microchip",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1058,7 +1058,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Plasma Conductor Module",
+            name: "Plasma Conductor",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1083,7 +1083,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Scanning Array Module",
+            name: "Scanning Array",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1108,7 +1108,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Quantum Tube Module",
+            name: "Quantum Tube",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1133,7 +1133,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Teladi Advanced Composite Module",
+            name: "Teladi Advanced Composite",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1158,7 +1158,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Teladi Engine Part Module",
+            name: "Teladi Engine Part",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1183,7 +1183,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Teladi Hull Part Module",
+            name: "Teladi Hull Part",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1208,7 +1208,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Teladi Scanning Array Module",
+            name: "Teladi Scanning Array",
             type: "High Tech",
             style: "Default",
             input: [
@@ -1233,7 +1233,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Computronic Substrate Module",
+            name: "Computronic Substrate",
             type: "High Tech",
             style: "Terran",
             input: [
@@ -1262,7 +1262,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Metallic Microlattice Module",
+            name: "Metallic Microlattice",
             type: "High Tech",
             style: "Terran",
             input: [
@@ -1287,7 +1287,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Silicon Carbide Module",
+            name: "Silicon Carbide",
             type: "High Tech",
             style: "Terran",
             input: [
@@ -1316,7 +1316,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Smart Chip Module",
+            name: "Smart Chip",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1337,7 +1337,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Missile Component Module",
+            name: "Missile Component",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1362,7 +1362,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Drone Component Module",
+            name: "Drone Component",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1395,7 +1395,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Turret Component Module",
+            name: "Turret Component",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1424,7 +1424,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Shield Component Module",
+            name: "Shield Component",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1449,7 +1449,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Weapon Component Module",
+            name: "Weapon Component",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1474,7 +1474,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Claytronics Module",
+            name: "Claytronics",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1503,7 +1503,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Field Coil Module",
+            name: "Field Coil",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1528,7 +1528,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Advanced Electronics Module",
+            name: "Advanced Electronics",
             type: "Ship Tech",
             style: "Default",
             input: [
@@ -1553,7 +1553,7 @@ let stationModules = {
             ]
         },
         {
-            name: "Antimatter Converter Module",
+            name: "Antimatter Converter",
             type: "Ship Tech",
             style: "Default",
             input: [

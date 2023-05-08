@@ -132,7 +132,7 @@ function handleInputs(index) {
     if (stationModules.modules[index].input) {
         moduleInputs.innerHTML += `<span style="font-weight: bold">Input /h:</span><br>`;
         stationModules.modules[index].input.forEach(input => {
-            moduleInputs.innerHTML += `<span>${commaSeparator(input.amount) + " " + input.name}</span><br>`;
+            moduleInputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount) + "<br>" + input.name}</span><br>`;
         });
         printDashes();
     } else {
@@ -147,7 +147,7 @@ function handleOutputs(index) {
     if (stationModules.modules[index].output) {
         moduleOutputs.innerHTML += `<span style="font-weight: bold">Output /h:</span><br>`;
         stationModules.modules[index].output.forEach(output => {
-            moduleOutputs.innerHTML += `<span>${commaSeparator(output.amount) + " " + output.name}</span><br>`;
+            moduleOutputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount) + "<br>" + output.name}</span><br>`;
         });
     } else {
         moduleOutputs.innerHTML += `<span style="font-weight: bold">Output: None</span><br>`;
