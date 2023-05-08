@@ -205,12 +205,6 @@ function printDashes() {
     }
 }
 
-
-function insertAddButton(index) {
-    let moduleInfo = document.getElementById('moduleInfo');
-    moduleInfo.innerHTML += `<div class="add-button" onclick="addSingleModule(${index})"></div>`;
-}
-
 /**
  * Clears the module info container in the middle.
  */
