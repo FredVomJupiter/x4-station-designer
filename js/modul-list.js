@@ -1,4 +1,4 @@
-let modules = [];
+let selectedModules = [];
 
 
 function getAllModules() {
@@ -230,15 +230,27 @@ function clearModulInfo() {
  * @param {*} index as number.
  */
 function addSingleModule(index) {
-    modules.push(index);
+    selectedModules.push(index);
+    drawModuleList();
+}
+
+
+function drawModuleList() {
+    clearModuleList();
+    selectedModules.sort((a, b) => (a - b));
     let moduleList = document.getElementById('moduleList');
-    moduleList.innerHTML = "";
-    modules.forEach(index => {
-        moduleList.innerHTML += `
-            <div style="display: flex; flex-direction: row;" onclick="showModuleDetails(${index})">
-                <span>${stationModules.modules[index].name}</span>
+    selectedModules.forEach(function(module, index) {
+       moduleList.innerHTML += `
+            <div class="listed-module">
+                <div>${stationModules.modules[selectedModules[index]].name}</div>
                 <div></div>
             </div>
-        `;
+       `;
     });
+}
+
+
+function clearModuleList() {
+    let moduleList = document.getElementById('moduleList');
+    moduleList.innerHTML = "";
 }

@@ -221,14 +221,12 @@ option:hover {
 
 /* Middle container */
 .module-counter-container {
+    position: relative;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     height: 100%;
     width: 100%;
     padding: 1rem;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: scroll;
     background: #E4EFF0;
     color: #002439;
 }
