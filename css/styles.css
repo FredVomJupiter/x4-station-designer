@@ -127,6 +127,7 @@ main {
 }
 
 option {
+    transition: all 125ms ease-in-out;
     padding: 0.5rem 0.5rem;
     color: #002439;
     cursor: pointer;
