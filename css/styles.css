@@ -134,16 +134,32 @@ option:hover {
 }
 
 .module-info {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 1rem 0rem;
     height: 396px;
     max-width: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     border-radius: 0.5rem;
     background: #7a7a7a;
     color: #293133;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:#293133;
+    background-image: url('../assets/img/add_white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .module-title-container {
@@ -171,6 +187,7 @@ option:hover {
     background: #b3b3b3;
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem;
+    border: 1px solid #af1414;
 }
 
 .dashes {
@@ -189,6 +206,7 @@ option:hover {
     background: #b3b3b3;
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem;
+    border: 1px solid #179842;
 }
 
 @keyframes blinking {
@@ -206,6 +224,20 @@ option:hover {
     display: flex;
     flex-direction: column;
     width: 33%;
+}
+
+.module-counter-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    margin-right: 0;
+    height: 396px;
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 0.5rem;
+    background: #7a7a7a;
+    color: #293133;
 }
 
 footer {

@@ -1,3 +1,6 @@
+let modules = [];
+
+
 function getAllModules() {
     clearModuleList();
     let moduleField = document.getElementById('modulesSelection');
@@ -101,6 +104,7 @@ function showModuleDetails(index) {
     clearModulInfo();
     setModuleTitle(index);
     setModuleInputOutput(index);
+    insertAddButton(index);
 }
 
 
@@ -111,9 +115,8 @@ function showModuleDetails(index) {
 function setModuleTitle(index) {
     let moduleTitle = document.getElementById('moduleTitle');
     moduleTitle.innerHTML += `
-        <span>${stationModules.modules[index].name}</span><br><br>
-        <span>${stationModules.modules[index].type}</span><br><br>
-        <span>Build style: ${stationModules.modules[index].style}</span><br><br>
+        <span>${stationModules.modules[index].name} Module</span><br><br>
+        <span style="font-size: 1rem">${stationModules.modules[index].type}</span><br><br>
     `;
 }
 
@@ -175,6 +178,11 @@ function printDashes() {
     }
 }
 
+function insertAddButton(index) {
+    let moduleInfo = document.getElementById('moduleInfo');
+    moduleInfo.innerHTML += `<div class="add-button" onclick="addSingleModule(${index})"></div>`;
+}
+
 /**
  * Clears the module info container in the middle.
  */
@@ -183,5 +191,20 @@ function clearModulInfo() {
     fields.forEach(field => {
         let moduleInfo = document.getElementById(field);
         moduleInfo.innerHTML = "";
+    });
+}
+
+
+function addSingleModule(index) {
+    modules.push(index);
+    let moduleList = document.getElementById('moduleList');
+    moduleList.innerHTML = "";
+    modules.forEach(index => {
+        moduleList.innerHTML += `
+            <div style="display: flex; flex-direction: row;">
+                <span>${stationModules.modules[index].name}</span>
+                <div></div>
+            </div>
+        `;
     });
 }
