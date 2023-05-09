@@ -338,7 +338,7 @@ function handleSumInputs(indexSelected) {
     let inputs = document.getElementById('multiplyInput');
     let module = stationModules.modules[indexSelected];
     if (module.input) {
-        inputs.innerHTML += `<span style="font-weight: bold">Sum Input /h:</span><br>`;
+        inputs.innerHTML += `<span style="font-weight: bold">${module.amount} x Input /h:</span><br>`;
         module.input.forEach(input => {
             inputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount * module.amount) + " " + input.name}</span><br>`;
         });
@@ -354,7 +354,7 @@ function handleSumInputs(indexSelected) {
 function handleSumOutputs(indexSelected) {
     let outputs = document.getElementById('multiplyOutput');
     let module = stationModules.modules[indexSelected];
-    outputs.innerHTML += `<span style="font-weight: bold">Sum Output /h:</span><br>`;
+    outputs.innerHTML += `<span style="font-weight: bold">${module.amount} x Output /h:</span><br>`;
     module.output.forEach(output => {
         outputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount * module.amount) + " " + output.name}</span><br>`;
     });
