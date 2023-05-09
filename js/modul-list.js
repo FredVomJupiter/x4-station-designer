@@ -234,6 +234,7 @@ function clearModulInfo() {
  */
 function addSingleModule(index) {
     stationModules.modules[index].amount++;
+    calculateStationData();
     drawModuleList();
     drawStationOverview();
 }
@@ -373,6 +374,30 @@ function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) 
     let buttonsElement2 = document.getElementById(buttonsShow);
     containerElement2.style.display = "flex";
     buttonsElement2.style.display = "flex";
+}
+
+
+function calculateStationData() {
+    stationModules.modules.forEach(function (module) {
+        if (module.amount > 0) {
+
+            module.input.forEach(input => {
+                resourcesTotal.Input.forEach(resource => {
+                    if (input.name === resource.name) {
+                        resource.amount += input.amount * module.amount;
+                    }
+                });
+            });
+
+            module.output.forEach(output => {
+                resourcesTotal.Output.forEach(resource => {
+                    if (output.name === resource.name) {
+                        resource.amount += output.amount * module.amount;
+                    }
+                });
+            });
+        }
+    });
 }
 
 
