@@ -340,7 +340,7 @@ function handleSumInputs(indexSelected) {
     if (module.input) {
         inputs.innerHTML += `<span style="font-weight: bold">Sum Input /h:</span><br>`;
         module.input.forEach(input => {
-            inputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount * module.amount) + "<br>" + input.name}</span><br>`;
+            inputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount * module.amount) + " " + input.name}</span><br>`;
         });
         printDashes("dashesMultiply");
     } else {
@@ -356,7 +356,7 @@ function handleSumOutputs(indexSelected) {
     let module = stationModules.modules[indexSelected];
     outputs.innerHTML += `<span style="font-weight: bold">Sum Output /h:</span><br>`;
     module.output.forEach(output => {
-        outputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount * module.amount) + "<br>" + output.name}</span><br>`;
+        outputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount * module.amount) + " " + output.name}</span><br>`;
     });
 }
 
