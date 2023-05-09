@@ -378,29 +378,15 @@ function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) 
     buttonsElement2.style.display = "flex";
 }
 
-
+/**
+ * Calculates the total input and output of all modules.
+ */
 function calculateStationData() {
     resetTotals();
     stationModules.modules.forEach(function (module) {
         if (module.amount > 0) {
-
-            if (module.input != null) {
-                module.input.forEach(input => {
-                    resourcesTotal.input.forEach(resource => {
-                        if (input.name === resource.name) {
-                            resource.amount += input.amount * module.amount;
-                        }
-                    });
-                });
-            }
-
-            module.output.forEach(output => {
-                resourcesTotal.output.forEach(resource => {
-                    if (output.name === resource.name) {
-                        resource.amount += output.amount * module.amount;
-                    }
-                });
-            });
+            calculateTotalInputs(module);
+            calculateTotalOutputs(module);
         }
     });
 }
@@ -414,6 +400,36 @@ function resetTotals() {
     });
     resourcesTotal.output.forEach(resource => {
         resource.amount = 0;
+    });
+}
+
+/**
+ * Multiplying the amount of a resource input times modules count then adding this to the total database.
+ * @param {*} module as object.
+ */
+function calculateTotalInputs(module) {
+    if (module.input != null) {
+        module.input.forEach(input => {
+            resourcesTotal.input.forEach(resource => {
+                if (input.name === resource.name) {
+                    resource.amount += input.amount * module.amount;
+                }
+            });
+        });
+    }
+}
+
+/**
+ * Multiplying the amount of a resource output times modules count then adding this to the total database.
+ * @param {*} module as object.
+ */
+function calculateTotalOutputs(module) {
+    module.output.forEach(output => {
+        resourcesTotal.output.forEach(resource => {
+            if (output.name === resource.name) {
+                resource.amount += output.amount * module.amount;
+            }
+        });
     });
 }
 
