@@ -1618,7 +1618,10 @@ let resourcesTotal = {
         { name: "Shield Components", amount: 0 },
         { name: "Weapon Components", amount: 0 },
         { name: "Claytronics", amount: 0 },
-        { name: "Scrap Metal", amount: 0 }
+        { name: "Scrap Metal", amount: 0 },
+        { name: "Antimatter Converters", amount: 0 },
+        { name: "Advanced Electronics", amount: 0 },
+        { name: "Field Coils", amount: 0 },
     ],
     output: [
         { name: "Energy Cells", amount: 0 },
@@ -1674,7 +1677,10 @@ let resourcesTotal = {
         { name: "Shield Components", amount: 0 },
         { name: "Weapon Components", amount: 0 },
         { name: "Claytronics", amount: 0 },
-        { name: "Scrap Metal", amount: 0 }
+        { name: "Scrap Metal", amount: 0 },
+        { name: "Antimatter Converters", amount: 0 },
+        { name: "Advanced Electronics", amount: 0 },
+        { name: "Field Coils", amount: 0 }
     ]
 }
 
@@ -1733,6 +1739,9 @@ let deficit = {
         { name: "Shield Components", amount: 0 },
         { name: "Weapon Components", amount: 0 },
         { name: "Claytronics", amount: 0 },
-        { name: "Scrap Metal", amount: 0 }
+        { name: "Scrap Metal", amount: 0 },
+        { name: "Antimatter Converters", amount: 0 },
+        { name: "Advanced Electronics", amount: 0 },
+        { name: "Field Coils", amount: 0 }
     ]
 }

@@ -123,7 +123,7 @@ function drawDeficits() {
     deficit.input.forEach(entry => {
         if (entry.amount < -0) {
             deficitContainer.innerHTML += `
-                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: orange">${commaSeparator(entry.amount) + "<br>" + entry.name}</span><br>
+                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: orange">${commaSeparator(entry.amount) + " " + entry.name}</span><br>
             `;
         }
     });
@@ -155,7 +155,7 @@ function drawSurplus() {
     deficit.input.forEach(entry => {
         if (entry.amount > 0) {
             surplusContainer.innerHTML += `
-                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: lightgreen">${commaSeparator(entry.amount) + "<br>" + entry.name}</span><br>
+                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: lightgreen">${commaSeparator(entry.amount) + " " + entry.name}</span><br>
             `;
         }
     });
