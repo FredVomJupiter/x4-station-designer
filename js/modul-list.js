@@ -152,7 +152,7 @@ function setModuleTitle(index) {
  * and multiplication container.
  */
 function showHiddenInputOutput() {
-    let elements = ['inputs', 'outputs', 'multiplyInput', 'multiplyOutput', 'slideButtonModule', 'slideButtonStation'];
+    let elements = ['inputs', 'outputs', 'multiplyInput', 'multiplyOutput', 'slideButtonModule', 'slideButtonStation', 'inputsStation', 'outputsStation'];
     elements.forEach(element => {
         let domReference = document.getElementById(element);
         domReference.style.display = "flex";
@@ -379,11 +379,12 @@ function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) 
 function drawStationOverview() {
     clearStationOverview();
     setStationTitle(); // For the station overview panel
+    setStationData(); // For the station overview panel
 }
 
 
 function clearStationOverview() {
-    let fields = ['stationTitle', 'inputsStation', 'outputsStation'];
+    let fields = ['stationTitle', 'inputsStation', 'outputsStation', 'dashesStation'];
     fields.forEach(field => {
         let moduleInfo = document.getElementById(field);
         moduleInfo.innerHTML = "";
@@ -401,7 +402,8 @@ function setStationTitle() {
 
 function setStationData() {
     let input = document.getElementById('inputsStation');
-    input.innerHTML = ``;
+    input.innerHTML = `<span style="font-weight: bold">Input /h:</span><br>`;
+    printDashes("dashesStation");
     let output = document.getElementById('outputsStation');
-    output.innerHTML = ``;
+    output.innerHTML = `<span style="font-weight: bold"> Output /h:</span><br>`;
 }

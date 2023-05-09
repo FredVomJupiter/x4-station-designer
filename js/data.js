@@ -1578,7 +1578,35 @@ let resourcesTotal = {
             amount: 0
         },
         {
+            name: "Hydrogen",
+            amount: 0
+        },
+        {
+            name: "Helium",
+            amount: 0
+        },
+        {
+            name: "Methane",
+            amount: 0
+        },
+        {
+            name: "Ice",
+            amount: 0
+        },
+        {
             name: "Water",
+            amount: 0
+        },
+        {
+            name: "Refined Metals",
+            amount: 0
+        },
+        {
+            name: "Silicon Wafers",
+            amount: 0
+        },
+        {
+            name: "Graphene",
             amount: 0
         }
 
