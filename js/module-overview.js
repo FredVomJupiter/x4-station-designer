@@ -250,12 +250,12 @@ function drawModuleList() {
             moduleList.innerHTML += `
                 <div class="listed-module" onclick="showModuleDetails(${index})">
                     <div class="listed-module-info">${module.amount} x ${module.name}
-                    <img src="../assets/img/info.svg">
+                    <img src="assets/img/info.svg">
                     </div>
                     <div class="listed-module-btns">
-                        <img src="../assets/img/delete.svg" onclick="deleteModule(${index})">
-                        <img src="../assets/img/add_small.svg" onclick="increaseModule(${index})">
-                        <img src="../assets/img/remove_small.svg" onclick="decreaseModule(${index})">
+                        <img src="assets/img/delete.svg" onclick="deleteModule(${index})">
+                        <img src="assets/img/add_small.svg" onclick="increaseModule(${index})">
+                        <img src="assets/img/remove_small.svg" onclick="decreaseModule(${index})">
                     </div>
                 </div>
             `;
