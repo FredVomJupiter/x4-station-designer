@@ -1564,7 +1564,7 @@ let stationModules = {
 };
 
 let resourcesTotal = {
-    Input: [
+    input: [
         { name: "Energy Cells", amount: 0 },
         { name: "Ore", amount: 0 },
         { name: "Silicon", amount: 0 },
@@ -1619,7 +1619,7 @@ let resourcesTotal = {
         { name: "Weapon Components", amount: 0 },
         { name: "Claytronics", amount: 0 }
     ],
-    Output: [
+    output: [
         { name: "Energy Cells", amount: 0 },
         { name: "Ore", amount: 0 },
         { name: "Silicon", amount: 0 },
