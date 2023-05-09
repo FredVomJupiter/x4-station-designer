@@ -238,14 +238,11 @@ function drawModuleList() {
                     <div class="listed-module-info">${module.amount} x ${module.name}
                     <img src="../assets/img/info.svg">
                     </div>
-                    
-
                     <div class="listed-module-btns">
                         <img src="../assets/img/delete.svg" onclick="deleteModule(${index})">
                         <img src="../assets/img/add_small.svg" onclick="increaseModule(${index})">
                         <img src="../assets/img/remove_small.svg" onclick="decreaseModule(${index})">
                     </div>
-
                 </div>
             `;
         }
@@ -258,7 +255,10 @@ function clearModuleList() {
     moduleList.innerHTML = "";
 }
 
-
+/**
+ * Sets the amount of a module at index "deleteIndex" to 0, thus deleting all modules of one kind.
+ * @param {*} deleteIndex as number.
+ */
 function deleteModule(deleteIndex) {
     stationModules.modules.forEach(function (module, index) {
         if (index === deleteIndex) {
@@ -268,7 +268,10 @@ function deleteModule(deleteIndex) {
     drawModuleList();
 }
 
-
+/**
+ * Increseas the amount of a choosen module by 1.
+ * @param {*} increaseIndex as number.
+ */
 function increaseModule(increaseIndex) {
     stationModules.modules.forEach(function (module, index) {
         if (index === increaseIndex && module.amount != 999) {
@@ -278,7 +281,10 @@ function increaseModule(increaseIndex) {
     drawModuleList();
 }
 
-
+/**
+ * Decreases the amount of a choosen module by 1.
+ * @param {*} increaseIndex as number.
+ */
 function decreaseModule(decreaseIndex) {
     stationModules.modules.forEach(function (module, index) {
         if (index === decreaseIndex && module.amount != 0) {
