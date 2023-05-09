@@ -293,6 +293,7 @@ function increaseModule(increaseIndex) {
             module.amount++;
         }
     });
+    calculateStationData();
     drawModuleList();
     drawStationOverview();
 }
@@ -307,6 +308,7 @@ function decreaseModule(decreaseIndex) {
             module.amount--;
         }
     });
+    calculateStationData();
     drawModuleList();
     drawStationOverview();
 }
@@ -378,19 +380,22 @@ function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) 
 
 
 function calculateStationData() {
+    resetTotals();
     stationModules.modules.forEach(function (module) {
         if (module.amount > 0) {
 
-            module.input.forEach(input => {
-                resourcesTotal.Input.forEach(resource => {
-                    if (input.name === resource.name) {
-                        resource.amount += input.amount * module.amount;
-                    }
+            if (module.input != null) {
+                module.input.forEach(input => {
+                    resourcesTotal.input.forEach(resource => {
+                        if (input.name === resource.name) {
+                            resource.amount += input.amount * module.amount;
+                        }
+                    });
                 });
-            });
+            }
 
             module.output.forEach(output => {
-                resourcesTotal.Output.forEach(resource => {
+                resourcesTotal.output.forEach(resource => {
                     if (output.name === resource.name) {
                         resource.amount += output.amount * module.amount;
                     }
@@ -400,9 +405,22 @@ function calculateStationData() {
     });
 }
 
+/**
+ * Sets all resource amounts to 0 before a new calculation starts.
+ */
+function resetTotals() {
+    resourcesTotal.input.forEach(resource => {
+        resource.amount = 0;
+    });
+    resourcesTotal.output.forEach(resource => {
+        resource.amount = 0;
+    });
+}
+
 
 function drawStationOverview() {
     clearStationOverview();
+    calculateStationData();
     setStationTitle(); // For the station overview panel
     setStationData(); // For the station overview panel
 }
@@ -428,7 +446,21 @@ function setStationTitle() {
 function setStationData() {
     let input = document.getElementById('inputsStation');
     input.innerHTML = `<span style="font-weight: bold">Input /h:</span><br>`;
+
+    resourcesTotal.input.forEach(resource => {
+        if (resource.amount > 0) {
+            input.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + "<br>" + resource.name}</span><br>`;
+        }
+    });
+
     printDashes("dashesStation");
+
     let output = document.getElementById('outputsStation');
     output.innerHTML = `<span style="font-weight: bold"> Output /h:</span><br>`;
+
+    resourcesTotal.output.forEach(resource => {
+        if (resource.amount > 0) {
+            output.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + "<br>" + resource.name}</span><br>`;
+        }
+    });
 }
