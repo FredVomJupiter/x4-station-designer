@@ -57,8 +57,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 480px;
-    max-height: 480px;
+    height: 640px;
+    max-height: 640px;
     max-width: 1920px;
     background: #002439;
     border-radius: 1rem;
@@ -77,7 +77,6 @@ main {
     display: flex;
     flex-direction: column;
     width: 20%;
-    justify-content: space-between;
     border-radius: 0.5rem;
 }
 
@@ -147,34 +146,36 @@ option:hover {
 
 /* Right container */
 .module-info {
+    box-sizing: border-box;
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: hidden;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     background: #E4EFF0;
     color: #002439;
+    padding: 1rem 1rem;
 }
 
 .module-title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1rem;
     color: #002439;
     font-size: 1.5rem;
 }
 
 .input-output-container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0.5rem 1rem;
+    align-items: center;
+    padding: 1rem 0rem;
 }
 
 .inputs {
@@ -186,6 +187,7 @@ option:hover {
     color: #E4EFF0;
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .dashes {
@@ -206,6 +208,29 @@ option:hover {
     color: #E4EFF0;
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.module-multiplicator-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.module-multiplicator {
+    display: none;
+    width: 200px;
+    min-height: 100px;
+    flex-direction: column;
+    background: #005066;
+    color: #E4EFF0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes blinking {
@@ -258,6 +283,38 @@ option:hover {
     user-select: none;
 }
 
+/* Slide button below containers and above footer */
+.slide-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.slide-button {
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #005066;
+    border-radius: 50%;
+    background-image: url('../assets/img/up_white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide-button:hover {
+    transition: all 125ms ease-in-out;
+    background: #78CCE2;
+    background-image: url('../assets/img/up.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* FOOTER */
 footer {
     position: relative;
@@ -273,7 +330,7 @@ footer {
 .footer-container {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 1920px;
     max-width: 1920px;
     padding-left: 1rem;
@@ -283,6 +340,10 @@ footer {
 a {
     text-decoration: none;
     color: #E4EFF0;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .d-none {
