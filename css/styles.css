@@ -422,7 +422,8 @@ a:hover {
 }
 
 @media screen and (width < 1440px) {
-    .main {
+    main {
+        position: relative;
         max-width: min(100vw, 1440px);
         height: unset !important;
         max-height: unset !important;
@@ -475,6 +476,7 @@ a:hover {
     }
 
     footer {
-        bottom: calc(-26.5vh);
+        position: absolute;
+        bottom: -7rem;
     }
 }
