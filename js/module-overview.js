@@ -105,8 +105,8 @@ function highlightButton(selectedButton) {
  */
 function getOptionHTMLTemplate(index) {
     return `
-            <option value="${stationModules.modules[index].name}" onclick="addSingleModule(${index}); showModuleDetails(${index})">
-            ${stationModules.modules[index].name}</option>
+            <div class="option" value="${stationModules.modules[index].name}" onclick="addSingleModule(${index}); showModuleDetails(${index})">
+            ${stationModules.modules[index].name}</div>
         `;
 }
 
@@ -174,7 +174,7 @@ function handleInputs(index) {
     if (stationModules.modules[index].input) {
         moduleInputs.innerHTML += `<span style="font-weight: bold">Input /h:</span><br>`;
         stationModules.modules[index].input.forEach(input => {
-            moduleInputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount) + " " + input.name}</span><br>`;
+            moduleInputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount) + " " + input.name}</span>`;
         });
         printDashes("dashesSingle");
     } else {
@@ -189,7 +189,7 @@ function handleOutputs(index) {
     if (stationModules.modules[index].output) {
         moduleOutputs.innerHTML += `<span style="font-weight: bold">Output /h:</span><br>`;
         stationModules.modules[index].output.forEach(output => {
-            moduleOutputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount) + " " + output.name}</span><br>`;
+            moduleOutputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount) + " " + output.name}</span>`;
         });
     } else {
         moduleOutputs.innerHTML += `<span style="font-weight: bold">Output:<br>None</span><br>`;
@@ -340,7 +340,7 @@ function handleSumInputs(indexSelected) {
     if (module.input) {
         inputs.innerHTML += `<span style="font-weight: bold">${module.amount} x Input /h:</span><br>`;
         module.input.forEach(input => {
-            inputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount * module.amount) + " " + input.name}</span><br>`;
+            inputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount * module.amount) + " " + input.name}</span>`;
         });
         printDashes("dashesMultiply");
     } else {
@@ -356,7 +356,7 @@ function handleSumOutputs(indexSelected) {
     let module = stationModules.modules[indexSelected];
     outputs.innerHTML += `<span style="font-weight: bold">${module.amount} x Output /h:</span><br>`;
     module.output.forEach(output => {
-        outputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount * module.amount) + " " + output.name}</span><br>`;
+        outputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount * module.amount) + " " + output.name}</span>`;
     });
 }
 

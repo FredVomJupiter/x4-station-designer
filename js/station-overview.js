@@ -99,7 +99,7 @@ function handleStationInputs() {
     input.innerHTML = `<span style="font-weight: bold">Input /h:</span><br>`;
     resourcesTotal.input.forEach(resource => {
         if (resource.amount > 0) {
-            input.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + " " + resource.name}</span><br>`;
+            input.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + " " + resource.name}</span>`;
         }
     });
 }
@@ -110,7 +110,7 @@ function handleStationOutputs() {
     output.innerHTML = `<span style="font-weight: bold"> Output /h:</span><br>`;
     resourcesTotal.output.forEach(resource => {
         if (resource.amount > 0) {
-            output.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + " " + resource.name}</span><br>`;
+            output.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + " " + resource.name}</span>`;
         }
     });
 }
@@ -123,7 +123,7 @@ function drawDeficits() {
     deficit.input.forEach(entry => {
         if (entry.amount < -0) {
             deficitContainer.innerHTML += `
-                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: orange">${commaSeparator(entry.amount) + " " + entry.name}</span><br>
+                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: orange">${commaSeparator(entry.amount) + " " + entry.name}</span>
             `;
         }
     });
@@ -155,7 +155,7 @@ function drawSurplus() {
     deficit.input.forEach(entry => {
         if (entry.amount > 0) {
             surplusContainer.innerHTML += `
-                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: lightgreen">${commaSeparator(entry.amount) + " " + entry.name}</span><br>
+                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: lightgreen">${commaSeparator(entry.amount) + " " + entry.name}</span>
             `;
         }
     });

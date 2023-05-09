@@ -123,7 +123,7 @@ main {
     border-left: 4px solid #002D40;
 }
 
-option {
+.option {
     transition: all 125ms ease-in-out;
     padding: 0.5rem 1rem;
     color: #002439;
@@ -133,7 +133,7 @@ option {
     background-position: calc(100% - 1rem);
 }
 
-option:hover {
+.option:hover {
     transition: all 125ms ease-in-out;
     background: #78CCE2;
     color: #002439;
