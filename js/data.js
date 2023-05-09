@@ -1563,52 +1563,64 @@ let stationModules = {
     ]
 };
 
+stationModules.modules.forEach(module => {
+    console.log("{ name: " + `"${module.output[0].name}"` + ", amount: 0 },");
+});
+
 let resourcesTotal = {
     resources: [
-        {
-            name: "Energy",
-            amount: 0
-        },
-        {
-            name: "Ore",
-            amount: 0
-        },
-        {
-            name: "Silicon",
-            amount: 0
-        },
-        {
-            name: "Hydrogen",
-            amount: 0
-        },
-        {
-            name: "Helium",
-            amount: 0
-        },
-        {
-            name: "Methane",
-            amount: 0
-        },
-        {
-            name: "Ice",
-            amount: 0
-        },
-        {
-            name: "Water",
-            amount: 0
-        },
-        {
-            name: "Refined Metals",
-            amount: 0
-        },
-        {
-            name: "Silicon Wafers",
-            amount: 0
-        },
-        {
-            name: "Graphene",
-            amount: 0
-        }
-
+        { name: "Energy Cells", amount: 0 },
+        { name: "Ore", amount: 0 },
+        { name: "Silicon", amount: 0 },
+        { name: "Hydrogen", amount: 0 },
+        { name: "Helium", amount: 0 },
+        { name: "Methane", amount: 0 },
+        { name: "Ice", amount: 0 },
+        { name: "Silicon Wafers", amount: 0 },
+        { name: "Refined Metals", amount: 0 },
+        { name: "Graphene", amount: 0 },
+        { name: "BoGas", amount: 0 },
+        { name: "Superfluid Coolant", amount: 0 },
+        { name: "Antimatter Cells", amount: 0 },
+        { name: "Teladianium", amount: 0 },
+        { name: "Water", amount: 0 },
+        { name: "Hull Parts", amount: 0 },
+        { name: "Computronic Substrate", amount: 0 },
+        { name: "Scrap Metal", amount: 0 },
+        { name: "Meat", amount: 0 },
+        { name: "Spices", amount: 0 },
+        { name: "Food Rations", amount: 0 },
+        { name: "Maja Snails", amount: 0 },
+        { name: "Soja Beans", amount: 0 },
+        { name: "Soja Husk", amount: 0 },
+        { name: "Sunrise Flowers", amount: 0 },
+        { name: "Swamp Plant", amount: 0 },
+        { name: "Nostrop Oil", amount: 0 },
+        { name: "Chelt Meat", amount: 0 },
+        { name: "Scruffin Fruit", amount: 0 },
+        { name: "Wheat", amount: 0 },
+        { name: "BoFu", amount: 0 },
+        { name: "Terran MRE", amount: 0 },
+        { name: "Plankton", amount: 0 },
+        { name: "Medical Supplies", amount: 0 },
+        { name: "Spacefuel", amount: 0 },
+        { name: "Maja Dust", amount: 0 },
+        { name: "Spaceweed", amount: 0 },
+        { name: "Stimulants", amount: 0 },
+        { name: "Advanced Composites", amount: 0 },
+        { name: "Engine Parts", amount: 0 },
+        { name: "Microchips", amount: 0 },
+        { name: "Plasma Conductors", amount: 0 },
+        { name: "Scanning Arrays", amount: 0 },
+        { name: "Quantum Tubes", amount: 0 },
+        { name: "Metallic Microlattice", amount: 0 },
+        { name: "Silicon Carbide", amount: 0 },
+        { name: "Smart Chips", amount: 0 },
+        { name: "Missile Components", amount: 0 },
+        { name: "Drone Components", amount: 0 },
+        { name: "Turret Components", amount: 0 },
+        { name: "Shield Components", amount: 0 },
+        { name: "Weapon Components", amount: 0 },
+        { name: "Claytronics", amount: 0 }
     ]
 }
