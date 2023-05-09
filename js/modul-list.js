@@ -378,6 +378,10 @@ function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) 
     buttonsElement2.style.display = "flex";
 }
 
+/************************************************************
+ * SECTION station overview calculations.
+ ***********************************************************/
+
 /**
  * Calculates the total input and output of all modules.
  */
@@ -460,6 +464,13 @@ function setStationTitle() {
 
 
 function setStationData() {
+    handleStationInputs();
+    printDashes("dashesStation");
+    handleStationOutputs();
+}
+
+
+function handleStationInputs() {
     let input = document.getElementById('inputsStation');
     input.innerHTML = `<span style="font-weight: bold">Input /h:</span><br>`;
 
@@ -468,9 +479,10 @@ function setStationData() {
             input.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + "<br>" + resource.name}</span><br>`;
         }
     });
+}
 
-    printDashes("dashesStation");
 
+function handleStationOutputs() {
     let output = document.getElementById('outputsStation');
     output.innerHTML = `<span style="font-weight: bold"> Output /h:</span><br>`;
 
