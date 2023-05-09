@@ -1563,10 +1563,6 @@ let stationModules = {
     ]
 };
 
-stationModules.modules.forEach(module => {
-    console.log("{ name: " + `"${module.output[0].name}"` + ", amount: 0 },");
-});
-
 let resourcesTotal = {
     resources: [
         { name: "Energy Cells", amount: 0 },
