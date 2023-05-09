@@ -171,7 +171,7 @@ option:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 1rem 0rem;
 }
 
@@ -370,7 +370,6 @@ option:hover {
 }
 
 .input-deficits {
-    align-self: center;
     display: flex;
     width: 200px;
     height: fit-content;
