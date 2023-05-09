@@ -1582,6 +1582,7 @@ let resourcesTotal = {
         { name: "Water", amount: 0 },
         { name: "Hull Parts", amount: 0 },
         { name: "Computronic Substrate", amount: 0 },
+        { name: "Raw Scrap Metal", amount: 0 },
         { name: "Scrap Metal", amount: 0 },
         { name: "Meat", amount: 0 },
         { name: "Spices", amount: 0 },
