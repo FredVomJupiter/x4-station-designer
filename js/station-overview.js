@@ -67,7 +67,7 @@ function drawStationOverview() {
 
 
 function clearStationOverview() {
-    let fields = ['stationTitle', 'inputsStation', 'outputsStation', 'dashesStation', 'stationDeficits'];
+    let fields = ['stationTitle', 'inputsStation', 'outputsStation', 'dashesStation', 'stationDeficits', 'stationSurplus'];
     fields.forEach(field => {
         let moduleInfo = document.getElementById(field);
         moduleInfo.innerHTML = "";
@@ -90,6 +90,7 @@ function setStationData() {
     printDashes("dashesStation");
     handleStationOutputs();
     drawDeficits();
+    drawSurplus();
 }
 
 
@@ -118,7 +119,7 @@ function handleStationOutputs() {
 function drawDeficits() {
     calculateDeficits();
     let deficitContainer = document.getElementById('stationDeficits');
-    deficitContainer.innerHTML += `<span style="font-weight: bold">Deficits /h:</span><br>`;
+    deficitContainer.innerHTML += `<span style="font-weight: bold">Deficit /h:</span><br>`;
     deficit.input.forEach(entry => {
         if (entry.amount < -0) {
             deficitContainer.innerHTML += `
@@ -144,5 +145,18 @@ function calculateDeficits() {
 function resetDeficits() {
     deficit.input.forEach(entry => {
         entry.amount = 0;
+    });
+}
+
+
+function drawSurplus() {
+    let surplusContainer = document.getElementById('stationSurplus');
+    surplusContainer.innerHTML += `<span style="font-weight: bold">Surplus /h:</span><br>`;
+    deficit.input.forEach(entry => {
+        if (entry.amount > 0) {
+            surplusContainer.innerHTML += `
+                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: lightgreen">${commaSeparator(entry.amount) + "<br>" + entry.name}</span><br>
+            `;
+        }
     });
 }

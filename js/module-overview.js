@@ -152,7 +152,7 @@ function setModuleTitle(index) {
  * and multiplication container.
  */
 function showHiddenInputOutput() {
-    let elements = ['inputs', 'outputs', 'multiplyInput', 'multiplyOutput', 'slideButtonModule', 'slideButtonStation', 'inputsStation', 'outputsStation', 'stationDeficits'];
+    let elements = ['inputs', 'outputs', 'multiplyInput', 'multiplyOutput', 'slideButtonModule', 'slideButtonStation', 'inputsStation', 'outputsStation', 'stationDeficits', 'stationSurplus'];
     elements.forEach(element => {
         let domReference = document.getElementById(element);
         domReference.style.display = "flex";
