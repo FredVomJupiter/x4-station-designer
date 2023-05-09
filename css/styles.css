@@ -3,6 +3,7 @@ body {
     font-family: 'Verdana';
     margin: 0 auto;
     background: #E4EFF0;
+    height: 100%;
 }
 
 header {
@@ -476,7 +477,6 @@ a:hover {
     }
 
     footer {
-        position: absolute;
-        bottom: -7rem;
+        position: relative;
     }
 }
