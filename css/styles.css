@@ -321,7 +321,7 @@ option:hover {
     transform: rotate(90deg);
 }
 
-.slide-button-no-hover {
+.info-button {
     display: flex;
     align-items: center;
     justify-content: center;

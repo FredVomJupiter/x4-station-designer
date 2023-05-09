@@ -152,18 +152,11 @@ function setModuleTitle(index) {
  * and multiplication container.
  */
 function showHiddenInputOutput() {
-    let moduleInputs = document.getElementById('inputs');
-    let moduleOutputs = document.getElementById('outputs');
-    let multiplyInputs = document.getElementById('multiplyInput');
-    let multiplyOutputs = document.getElementById('multiplyOutput');
-    let slidebtnsModule = document.getElementById('slideButtonModule');
-    let slidebtnsStation = document.getElementById('slideButtonStation');
-    slidebtnsStation.style.display = "flex";
-    slidebtnsModule.style.display = "flex";
-    multiplyOutputs.style.display = "flex";
-    multiplyInputs.style.display = "flex";
-    moduleInputs.style.display = "flex";
-    moduleOutputs.style.display = "flex";
+    let elements = ['inputs', 'outputs', 'multiplyInput', 'multiplyOutput', 'slideButtonModule', 'slideButtonStation'];
+    elements.forEach(element => {
+        let domReference = document.getElementById(element);
+        domReference.style.display = "flex";
+    });
 }
 
 /**
