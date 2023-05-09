@@ -156,6 +156,8 @@ function showHiddenInputOutput() {
     let moduleOutputs = document.getElementById('outputs');
     let multiplyInputs = document.getElementById('multiplyInput');
     let multiplyOutputs = document.getElementById('multiplyOutput');
+    let slidebtns = document.getElementById('slideButtonModule');
+    slidebtns.style.display = "flex";
     multiplyOutputs.style.display = "flex";
     multiplyInputs.style.display = "flex";
     moduleInputs.style.display = "flex";
@@ -238,6 +240,7 @@ function clearModulInfo() {
 function addSingleModule(index) {
     stationModules.modules[index].amount++;
     drawModuleList();
+    drawStationOverview();
 }
 
 /**
@@ -281,6 +284,7 @@ function deleteModule(deleteIndex) {
         }
     });
     drawModuleList();
+    drawStationOverview();
 }
 
 /**
@@ -294,6 +298,7 @@ function increaseModule(increaseIndex) {
         }
     });
     drawModuleList();
+    drawStationOverview();
 }
 
 /**
@@ -307,6 +312,7 @@ function decreaseModule(decreaseIndex) {
         }
     });
     drawModuleList();
+    drawStationOverview();
 }
 
 /**
@@ -354,4 +360,35 @@ function handleSumOutputs(indexSelected) {
     module.output.forEach(output => {
         outputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount * module.amount) + "<br>" + output.name}</span><br>`;
     });
+}
+
+/**
+ * Toggles between the station overview and the module overview.
+ * @param {*} containerHide as string.
+ * @param {*} buttonsHide as string.
+ * @param {*} containerShow as string.
+ * @param {*} buttonsShow as string.
+ */
+function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) {
+    let containerElement = document.getElementById(containerHide);
+    let buttonsElement = document.getElementById(buttonsHide);
+    containerElement.style.display = "none";
+    buttonsElement.style.display = "none";
+    let containerElement2 = document.getElementById(containerShow);
+    let buttonsElement2 = document.getElementById(buttonsShow);
+    containerElement2.style.display = "flex";
+    buttonsElement2.style.display = "flex";
+}
+
+
+function drawStationOverview() {
+    setStationTitle(); // For the station overview panel
+}
+
+
+function setStationTitle() {
+    let moduleTitle = document.getElementById('stationTitle');
+    moduleTitle.innerHTML += `
+        <span style="font-size: 1.5rem; font-weight: bold;">Your Station</span><br><br>
+    `;
 }

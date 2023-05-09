@@ -54,6 +54,13 @@
                     <div class="module-title-container" id=moduleTitle>
                         <!-- Title container -->
                     </div>
+
+                    <div class="slide-button-container-module" id="slideButtonModule">
+                        Show Station Overview
+                        <div class="slide-button transform-right" onclick="toggleOverview('moduleInfo', 'slideButtonModule', 'stationInfo', 'slideButtonStation')">
+                        </div>
+                    </div>
+
                     <div class="input-output-container">
                         <!-- Input Outpun animation -->
                         <div class="inputs d-none" id="inputs">
@@ -79,13 +86,19 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
+                <div class="station-info" id="stationInfo">
+                    <div class="station-title-container" id=stationTitle>
+                        <!-- Title container -->
+                    </div>
 
-        <div class="slide-button-container">
-            <div class="slide-button">
+                    <div class="slide-button-container-station" id="slideButtonStation">
+                        Show Module Overview
+                        <div class="slide-button transform-right" onclick="toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            Show Overall Input-Output
         </div>
 
     </main>
