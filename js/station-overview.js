@@ -1,4 +1,3 @@
-
 /************************************************************
  * SECTION station overview calculations.
  ***********************************************************/
@@ -68,7 +67,7 @@ function drawStationOverview() {
 
 
 function clearStationOverview() {
-    let fields = ['stationTitle', 'inputsStation', 'outputsStation', 'dashesStation'];
+    let fields = ['stationTitle', 'inputsStation', 'outputsStation', 'dashesStation', 'stationDeficits'];
     fields.forEach(field => {
         let moduleInfo = document.getElementById(field);
         moduleInfo.innerHTML = "";
@@ -90,6 +89,7 @@ function setStationData() {
     handleStationInputs();
     printDashes("dashesStation");
     handleStationOutputs();
+    drawDeficits();
 }
 
 
@@ -111,5 +111,38 @@ function handleStationOutputs() {
         if (resource.amount > 0) {
             output.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + "<br>" + resource.name}</span><br>`;
         }
+    });
+}
+
+
+function drawDeficits() {
+    calculateDeficits();
+    let deficitContainer = document.getElementById('stationDeficits');
+    deficitContainer.innerHTML += `<span style="font-weight: bold">Deficits /h:</span><br>`;
+    deficit.input.forEach(entry => {
+        if (entry.amount < -0) {
+            deficitContainer.innerHTML += `
+                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: orange">${commaSeparator(entry.amount) + "<br>" + entry.name}</span><br>
+            `;
+        }
+    });
+}
+
+/**
+ * Substacts the input from the output to get the deficit.
+ */
+function calculateDeficits() {
+    resetDeficits();
+    for (let index = 0; index < deficit.input.length; index++) {
+        deficit.input[index].amount = resourcesTotal.output[index].amount - resourcesTotal.input[index].amount;
+    }
+}
+
+/**
+ * Sets all deficit amounts to 0 before a new calculation starts.
+ */
+function resetDeficits() {
+    deficit.input.forEach(entry => {
+        entry.amount = 0;
     });
 }

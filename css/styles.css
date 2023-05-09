@@ -369,6 +369,19 @@ option:hover {
     color: #005066;
 }
 
+.input-deficits {
+    align-self: center;
+    display: flex;
+    width: 200px;
+    height: fit-content;
+    flex-direction: column;
+    background: #005066;
+    color: #E4EFF0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 /* FOOTER */
 footer {
     position: absolute;
