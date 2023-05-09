@@ -235,8 +235,17 @@ function drawModuleList() {
         if (module.amount > 0) {
             moduleList.innerHTML += `
                 <div class="listed-module" onclick="showModuleDetails(${index})">
-                    <div>${module.amount} x ${module.name}</div>
+                    <div class="listed-module-info">${module.amount} x ${module.name}
                     <img src="../assets/img/info.svg">
+                    </div>
+                    
+
+                    <div class="listed-module-btns">
+                        <img src="../assets/img/delete.svg" onclick="deleteModule(${index})">
+                        <img src="../assets/img/add_small.svg" onclick="increaseModule(${index})">
+                        <img src="../assets/img/remove_small.svg" onclick="decreaseModule(${index})">
+                    </div>
+
                 </div>
             `;
         }
@@ -247,4 +256,34 @@ function drawModuleList() {
 function clearModuleList() {
     let moduleList = document.getElementById('moduleList');
     moduleList.innerHTML = "";
+}
+
+
+function deleteModule(deleteIndex) {
+    stationModules.modules.forEach(function (module, index) {
+        if (index === deleteIndex) {
+            module.amount = 0;
+        }
+    });
+    drawModuleList();
+}
+
+
+function increaseModule(increaseIndex) {
+    stationModules.modules.forEach(function (module, index) {
+        if (index === increaseIndex && module.amount != 999) {
+            module.amount++;
+        }
+    });
+    drawModuleList();
+}
+
+
+function decreaseModule(decreaseIndex) {
+    stationModules.modules.forEach(function (module, index) {
+        if (index === decreaseIndex && module.amount != 0) {
+            module.amount--;
+        }
+    });
+    drawModuleList();
 }

@@ -128,12 +128,12 @@ main {
 
 option {
     transition: all 125ms ease-in-out;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     color: #002439;
     cursor: pointer;
     background-image: url('../assets/img/add.svg');
     background-repeat: no-repeat;
-    background-position: calc(100% - 2rem);
+    background-position: calc(100% - 1rem);
 }
 
 option:hover {
@@ -142,7 +142,7 @@ option:hover {
     color: #002439;
     background-image: url('../assets/img/add.svg');
     background-repeat: no-repeat;
-    background-position: calc(100% - 3rem);
+    background-position: calc(100% - 2rem);
 }
 
 /* Right container */
@@ -231,10 +231,10 @@ option:hover {
 }
 
 .listed-module {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    justify-content: space-between;
     cursor: pointer;
     transition: all 125ms ease-in-out;
 }
@@ -242,6 +242,20 @@ option:hover {
 .listed-module:hover {
     background: #78CCE2;
     color: #002439;
+}
+
+.listed-module-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.listed-module-btns {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
 }
 
 /* FOOTER */
