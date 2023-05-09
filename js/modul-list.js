@@ -156,8 +156,10 @@ function showHiddenInputOutput() {
     let moduleOutputs = document.getElementById('outputs');
     let multiplyInputs = document.getElementById('multiplyInput');
     let multiplyOutputs = document.getElementById('multiplyOutput');
-    let slidebtns = document.getElementById('slideButtonModule');
-    slidebtns.style.display = "flex";
+    let slidebtnsModule = document.getElementById('slideButtonModule');
+    let slidebtnsStation = document.getElementById('slideButtonStation');
+    slidebtnsStation.style.display = "flex";
+    slidebtnsModule.style.display = "flex";
     multiplyOutputs.style.display = "flex";
     multiplyInputs.style.display = "flex";
     moduleInputs.style.display = "flex";
@@ -382,13 +384,23 @@ function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) 
 
 
 function drawStationOverview() {
+    clearStationOverview();
     setStationTitle(); // For the station overview panel
+}
+
+
+function clearStationOverview() {
+    let fields = ['stationTitle'];
+    fields.forEach(field => {
+        let moduleInfo = document.getElementById(field);
+        moduleInfo.innerHTML = "";
+    });
 }
 
 
 function setStationTitle() {
     let moduleTitle = document.getElementById('stationTitle');
     moduleTitle.innerHTML += `
-        <span style="font-size: 1.5rem; font-weight: bold;">Your Station</span><br><br>
+        <span style="font-size: 1.5rem;">Station Overview</span><br><br>
     `;
 }

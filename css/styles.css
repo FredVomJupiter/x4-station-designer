@@ -321,6 +321,19 @@ option:hover {
     transform: rotate(90deg);
 }
 
+.slide-button-no-hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #005066;
+    border-radius: 50%;
+    background-image: url('../assets/img/up_white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* Station overview Input-Output of all modules */
 .station-info {
     box-sizing: border-box;
@@ -340,7 +353,7 @@ option:hover {
 }
 
 .slide-button-container-station {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: row;
