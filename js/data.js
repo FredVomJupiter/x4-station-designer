@@ -1562,3 +1562,25 @@ let stationModules = {
         }
     ]
 };
+
+let resourcesTotal = {
+    resources: [
+        {
+            name: "Energy",
+            amount: 0
+        },
+        {
+            name: "Ore",
+            amount: 0
+        },
+        {
+            name: "Silicon",
+            amount: 0
+        },
+        {
+            name: "Water",
+            amount: 0
+        }
+
+    ]
+}

@@ -383,7 +383,7 @@ function drawStationOverview() {
 
 
 function clearStationOverview() {
-    let fields = ['stationTitle'];
+    let fields = ['stationTitle', 'inputsStation', 'outputsStation'];
     fields.forEach(field => {
         let moduleInfo = document.getElementById(field);
         moduleInfo.innerHTML = "";
@@ -396,4 +396,12 @@ function setStationTitle() {
     moduleTitle.innerHTML += `
         <span style="font-size: 1.5rem;">Station Overview</span><br><br>
     `;
+}
+
+
+function setStationData() {
+    let input = document.getElementById('inputsStation');
+    input.innerHTML = ``;
+    let output = document.getElementById('outputsStation');
+    output.innerHTML = ``;
 }
