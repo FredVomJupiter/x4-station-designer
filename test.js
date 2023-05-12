@@ -1,50 +1,76 @@
-let div = d3.select(".test").append("div")
-.style("opacity", 0)
-.style('position', 'absolute')
-.style('top', '30%')
-.style('left', '40%')
-.style('width', 'fit-content')
-.style('height', 'fit-content')
-.style('padding', '0.5rem')
-.style('box-shadow', '2px 2px 2px 2px rgba(0,0,0,0.2)')
-.style('border-radius', '0.5rem')
-.style('color', 'black');
+// Most of the below code is from https://www.d3-graph-gallery.com/graph/treemap_json.html created by Yan Holtz https://www.yan-holtz.com/. I have modified it to fit my needs.
 
-let xScale = d3.scaleBand()
-.domain(stationModules.modules.map((data) => data.output.amount))
-.rangeRound([0, 15000])
-.padding(0.1);
-let yScale = d3.scaleLinear().domain([0, 15000]).range([15000, 0]);
+// Returns 10 colors *** added by me ***
+let color = d3.scaleOrdinal(d3.schemeCategory10);
 
-let container = d3.select('svg')
-.classed('container', true);
+// set the dimensions and margins of the graph
+const margin = { top: 10, right: 10, bottom: 10, left: 10 },
+  width = 445 - margin.left - margin.right,
+  height = 445 - margin.top - margin.bottom;
 
-let bars = container
-.selectAll('.bar')
-.data(stationModules.modules)
-.enter()
-.append('rect')
-//.attr('fill', (data) => data.color) color may be added later to database
-.attr('width', xScale.bandwidth())
-.attr('height', (data) => 200 - yScale(data.amount))
-.attr('x', (data) => xScale(data.name))
-.attr('y', (data) => yScale(data.output.amount))
-.on('mouseover', function (d, i) {
-  d3.select(this).transition()
-    .duration(125)
-    .attr('opacity', '.85');
+// append the svg object to the body of the page
+const svg = d3.select("#my_dataviz")
+  .append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform",
+    `translate(${margin.left}, ${margin.top})`);
 
-  div.transition()
-    .duration(125)
-    .style("opacity", 1);
-  div.text(i.name + ": " + i.output.amount)
+// read json data
+d3.json("test.json").then(function (data) {
+
+  // Give the data to this cluster layout:
+  const root = d3.hierarchy(data).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
+
+  // Then d3.treemap computes the position of each element of the hierarchy
+  d3.treemap()
+    .size([width, height])
+    .padding(2)
+    (root)
+
+  // use this information to add rectangles:
+  svg
+    .selectAll("rect")
+    .data(root.leaves())
+    .join("rect")
+    .attr('x', function (d) { return d.x0; })
+    .attr('y', function (d) { return d.y0; })
+    .attr('width', function (d) { return d.x1 - d.x0; })
+    .attr('height', function (d) { return d.y1 - d.y0; })
+    .style("fill", function (d) { return color(d.parent.data.name) }) // color is based on parent's name *** added by me ***
+    .on('mouseover', function (d, i) { // mouseover and mouseout are used to change opacity of the rectangles *** added by me ***
+      d3.select(this).transition()
+        .duration(125)
+        .attr('opacity', '.85')
+        .attr('cursor', 'pointer');
+    })
+    .on('mouseout', function (d, i) {
+      d3.select(this).transition()
+        .duration(125)
+        .attr('opacity', '1');
+    });
+
+  // and to add the text labels
+  svg
+    .selectAll("text")
+    .data(root.leaves())
+    .join("text")
+    .attr("x", function (d) { return d.x0 + 5 })    // +5 to adjust position (more right)
+    .attr("y", function (d) { return d.y0 + 20 })    // +20 to adjust position (lower)
+    .text(function (d) { return d.data.name })
+    .attr("font-size", "15px")
+    .attr("fill", "white")
+    .attr('cursor', 'pointer'); //*** added by me ***
+
+  svg //*** added by me ***
+    .selectAll("#my_dataviz")
+    .data(root.leaves())
+    .join("text")
+    .attr("x", function (d) { return d.x0 + 5 })    // +5 to adjust position (more right)
+    .attr("y", function (d) { return d.y0 + 35 })    // +35 to adjust position (lower)
+    .text(function (d) { return d.data.value })
+    .attr("font-size", "12px")
+    .attr("fill", "white")
+    .attr('cursor', 'pointer');
 })
-.on('mouseout', function (d, i) {
-  d3.select(this).transition()
-    .duration(125)
-    .attr('opacity', '1');
-
-  div.transition()
-    .duration(125)
-    .style("opacity", 0);
-});
