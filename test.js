@@ -14,7 +14,7 @@ getData();
 
 data.children.forEach( child => {
   child.children.forEach( grandchild => {
-    grandchild.value = 10 + Math.floor(Math.random() * 100);
+    grandchild.value = 250 + Math.floor(Math.random() * 10000);
   });
 });
 
@@ -98,7 +98,7 @@ svg
   .join("text")
   .attr("x", function (d) { return d.x0 + 5 })    // +5 to adjust position (more right)
   .attr("y", function (d) { return d.y0 + 10 })    // +20 to adjust position (lower)
-  .text(function (d) { return d.x1 - d.x0 < 80 ? initials(d.data.name) : d.data.name }) // if the rectangle is too short, show initials instead of full name *** added by me ***
+  .text(function (d) { return d.x1 - d.x0 < 40 | (d.x1 - d.x0 < 80 && d.data.name.split('').length > 8) ? initials(d.data.name) : d.data.name }) // if the rectangle is too short, show initials instead of full name *** added by me ***
   .attr("font-size", "0.5rem")
   .attr("fill", "black")
   .attr('cursor', 'pointer'); //*** added by me ***
@@ -109,7 +109,7 @@ svg //*** added by me ***
   .join("text")
   .attr("x", function (d) { return d.x0 + 5 })    // +5 to adjust position (more right)
   .attr("y", function (d) { return d.y0 + 20 })    // +35 to adjust position (lower)
-  .text(function (d) { return d.y1 - d.y0 < 20 ? "" : d.data.value })
+  .text(function (d) { return d.y1 - d.y0 < 15 ? "" : d.data.value })
   .attr("font-size", "0.5rem")
   .attr("fill", "black")
   .attr('cursor', 'pointer');
