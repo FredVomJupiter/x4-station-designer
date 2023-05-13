@@ -98,7 +98,7 @@ svg
   .join("text")
   .attr("x", function (d) { return d.x0 + 5 })    // +5 to adjust position (more right)
   .attr("y", function (d) { return d.y0 + 10 })    // +20 to adjust position (lower)
-  .text(function (d) { return d.data.name })
+  .text(function (d) { return d.x1 - d.x0 < 80 ? initials(d.data.name) : d.data.name }) // if the rectangle is too short, show initials instead of full name *** added by me ***
   .attr("font-size", "0.5rem")
   .attr("fill", "black")
   .attr('cursor', 'pointer'); //*** added by me ***
@@ -109,21 +109,21 @@ svg //*** added by me ***
   .join("text")
   .attr("x", function (d) { return d.x0 + 5 })    // +5 to adjust position (more right)
   .attr("y", function (d) { return d.y0 + 20 })    // +35 to adjust position (lower)
-  .text(function (d) { return d.data.value })
+  .text(function (d) { return d.y1 - d.y0 < 20 ? "" : d.data.value })
   .attr("font-size", "0.5rem")
   .attr("fill", "black")
   .attr('cursor', 'pointer');
 
-legend
+legend //*** added by me ***
   .data(root.children)
   .enter()
   .append('rect')
-  .attr('width', 90)
+  .attr('width', 120)
   .attr('height', 20)
   .style("fill", function (d) { return color(d.data.name) })
-  .attr("transform", function (d, i) { return "translate( 0, " + (i * 20) + " )" });
+  .attr("transform", function (d, i) { return "translate( 0, " + (i * 22) + " )" });
 
-legend
+legend //*** added by me ***
   .data(root.children)
   .enter()
   .append('text')
@@ -131,4 +131,20 @@ legend
   .attr("y", 15)
   .text(function (d) { return d.data.name })
   .attr("font-size", "0.8rem")
-  .attr("transform", function (d, i) { return "translate( 0, " + (i * 20) + " )" });
+  .attr("transform", function (d, i) { return "translate( 5, " + (i * 22) + " )" });
+
+
+  /**
+   * Returns the initials of a string with one or more words. *** added by me ***
+   * @param {*} string 
+   * @returns initials of a string.
+   */
+  function initials(string) { 
+    let names = string.split(' '),
+        initials = names[0].substring(0, 1).toUpperCase();
+    
+    if (names.length > 1) {
+        initials += names[names.length - 1].substring(0, 1).toUpperCase();
+    }
+    return initials;
+  }
