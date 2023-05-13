@@ -9,3 +9,5 @@ with highlighted deficit and surplus. This allows you to calculate, how many mod
 self-sufficient station.
 
 In addition, I am implementing data driven documents treemaps and other viz with d3.js for more user interactivity and visually pleasing overview.
+
+![alt text](https://github.com/FredVomJupiter/x4-station-designer/blob/d3-data-driven-documents-implementation/treemap.png?raw=true)
