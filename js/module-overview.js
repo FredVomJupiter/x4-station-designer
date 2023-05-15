@@ -131,8 +131,6 @@ function showModuleDetails(index) {
     clearModulInfo();
     setModuleTitle(index);
     showHiddenInputOutput();
-    setModuleInputOutput(index);
-    calculateMultipleModules(index);
 }
 
 /**
@@ -152,48 +150,11 @@ function setModuleTitle(index) {
  * and multiplication container.
  */
 function showHiddenInputOutput() {
-    let elements = ['inputs', 'outputs', 'multiplyInput', 'multiplyOutput', 'slideButtonModule', 'slideButtonStation', 'inputsStation', 'outputsStation', 'stationDeficits', 'stationSurplus'];
+    let elements = ['slideButtonModule', 'slideButtonStation'];
     elements.forEach(element => {
         let domReference = document.getElementById(element);
         domReference.style.display = "flex";
     });
-}
-
-/**
- * Fills the input and output of the module info container in the middle.
- * @param {*} index as number.
- */
-function setModuleInputOutput(index) {
-    handleInputs(index);
-    handleOutputs(index);
-}
-
-
-function handleInputs(index) {
-    let moduleInputs = document.getElementById('inputs');
-    if (stationModules.modules[index].input) {
-        moduleInputs.innerHTML += `<span style="font-weight: bold">Input /h:</span><br>`;
-        stationModules.modules[index].input.forEach(input => {
-            moduleInputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount) + " " + input.name}</span>`;
-        });
-        printDashes("dashesSingle");
-    } else {
-        moduleInputs.innerHTML += `<span style="font-weight: bold">Input:<br></span><span style="font-size: 0.8rem">Love and Sunshine</span><br>`;
-        printDashes("dashesSingle");
-    }
-}
-
-
-function handleOutputs(index) {
-    let moduleOutputs = document.getElementById('outputs');
-    if (stationModules.modules[index].output) {
-        moduleOutputs.innerHTML += `<span style="font-weight: bold">Output /h:</span><br>`;
-        stationModules.modules[index].output.forEach(output => {
-            moduleOutputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount) + " " + output.name}</span>`;
-        });
-    } else {
-        moduleOutputs.innerHTML += `<span style="font-weight: bold">Output:<br>None</span><br>`;
-    }
 }
 
 /**
@@ -206,22 +167,10 @@ function commaSeparator(number) {
 }
 
 /**
- * Prints dashes with delayed green glowing effect to visualize input
- * output transaction.
- */
-function printDashes(location) {
-    let container = document.getElementById(location);
-    for (let index = 0; index < 15; index++) {
-        let delay = index * 100;
-        container.innerHTML += `<span style="animation: blinking 1s infinite; animation-delay: ${delay}ms;">-</span>`;
-    }
-}
-
-/**
  * Clears the module info container in the middle.
  */
 function clearModulInfo() {
-    let fields = ['inputs', 'dashesSingle', 'dashesMultiply', 'outputs', 'moduleTitle'];
+    let fields = ['moduleTitle'];
     fields.forEach(field => {
         let moduleInfo = document.getElementById(field);
         moduleInfo.innerHTML = "";
@@ -311,53 +260,6 @@ function decreaseModule(decreaseIndex) {
     calculateStationData();
     drawModuleList();
     drawStationOverview();
-}
-
-/**
- * Calculates and displays the input and output of all modules of a kind.
- * @param {*} indexSelected as number.
- */
-function calculateMultipleModules(indexSelected) {
-    clearModuleMultiplyer();
-    handleSumInputs(indexSelected);
-    handleSumOutputs(indexSelected);
-}
-
-/**
- * Clears the sum input and output container on the right.
- */
-function clearModuleMultiplyer() {
-    let inputs = document.getElementById('multiplyInput');
-    inputs.innerHTML = "";
-    let outputs = document.getElementById('multiplyOutput');
-    outputs.innerHTML = "";
-}
-
-
-function handleSumInputs(indexSelected) {
-    let inputs = document.getElementById('multiplyInput');
-    let module = stationModules.modules[indexSelected];
-    if (module.input) {
-        inputs.innerHTML += `<span style="font-weight: bold">${module.amount} x Input /h:</span><br>`;
-        module.input.forEach(input => {
-            inputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(input.amount * module.amount) + " " + input.name}</span>`;
-        });
-        printDashes("dashesMultiply");
-    } else {
-        inputs.innerHTML += `<span style="font-weight: bold">Sum Input /h:</span><br>`;
-        inputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">Love and Sunshine</span><br>`;
-        printDashes("dashesMultiply");
-    }
-}
-
-
-function handleSumOutputs(indexSelected) {
-    let outputs = document.getElementById('multiplyOutput');
-    let module = stationModules.modules[indexSelected];
-    outputs.innerHTML += `<span style="font-weight: bold">${module.amount} x Output /h:</span><br>`;
-    module.output.forEach(output => {
-        outputs.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(output.amount * module.amount) + " " + output.name}</span>`;
-    });
 }
 
 /**

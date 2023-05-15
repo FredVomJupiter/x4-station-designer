@@ -422,6 +422,13 @@ a:hover {
     display: none;
 }
 
+#pyramid {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    background: white;
+}
+
 @media screen and (width < 1440px) {
     main {
         position: relative;
