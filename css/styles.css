@@ -417,7 +417,6 @@ footer {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 1920px;
     max-width: 1920px;
     padding-left: 1rem;
     margin: 0 auto;
@@ -426,6 +425,8 @@ footer {
 a {
     text-decoration: none;
     color: #E4EFF0;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 a:hover {
@@ -488,5 +489,11 @@ a:hover {
 
     footer {
         position: relative;
+    }
+
+    .footer-container {
+        padding-left: 0;
+        width: 90%;
+        text-align: center;
     }
 }
