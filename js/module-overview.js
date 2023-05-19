@@ -233,98 +233,6 @@ function clearModulInfo() {
 }
 
 /**
- * Opens the popup and fills it with the module name and amount.
- * @param {*} index as number.
- */
-function openModulePopup(index) {
-    openPopup();
-    setPopupModuleValues(index);
-    selectedModuleIndex = index;
-}
-
-
-function openPopup() {
-    let popup = document.getElementById('popup');
-    popup.classList.remove('d-none');
-}
-
-
-function closePopup() {
-    let popup = document.getElementById('popup');
-    popup.classList.add('d-none');
-    let input = document.getElementById('popupCounter');
-    input.value = 1;
-}
-
-/**
- * Prints the module name and amount into the popup. If 0 modules of a kind
- * exist, the amount is set to 1.
- * @param {*} index as number.
- */
-function setPopupModuleValues(index) {
-    let moduleName = document.getElementById('popupModuleName');
-    moduleName.innerHTML = stationModules.modules[index].name;
-    let input = document.getElementById('popupCounter');
-    if (stationModules.modules[index].amount === 0) {
-        input.value = 1;
-    } else {
-        input.value = stationModules.modules[index].amount;
-    }
-}
-
-/**
- * Maximum number of modules is 999.
- * @param {*} event 
- */
-function increasePopupCounter(event) {
-    event.stopPropagation();
-    let input = document.getElementById('popupCounter');
-    if (input.value < 1000) {
-        input.value++;
-    }
-}
-
-/**
- * Minimum number of modules is 1.
- * @param {*} event 
- */
-function decreasePopupCounter(event) {
-    event.stopPropagation();
-    let input = document.getElementById('popupCounter');
-    if (input.value > 1) {
-        input.value--;
-    }
-}
-
-/**
- * Writes the amount of modules into the stationModules.modules array.
- * Clears and draws the list of selected modules.
- * @param {*} event 
- */
-function submitPopup(event) {
-    event.stopPropagation();
-    let input = document.getElementById('popupCounter');
-    if (input.value > 1000 || input.value < 1) {
-        input.value = "min 1 max 999";
-    } else if (containsOnlyNumbers(input.value) === false) {
-        input.value = 1;
-    } else {
-        stationModules.modules[selectedModuleIndex].amount = parseInt(input.value);
-        closePopup();
-        drawModuleList();
-        calculateStationData();
-        drawStationOverview();
-        showModuleDetails(selectedModuleIndex);
-    }
-}
-
-
-function containsOnlyNumbers(input) {
-    let regex = /^[0-9]+$/;
-    return regex.test(input);
-}
-
-/**
  * Only draws modules from stationModules.modules with amount > 0  into the moduleList.
  */
 function drawModuleList() {
@@ -332,20 +240,25 @@ function drawModuleList() {
     let moduleList = document.getElementById('moduleList');
     stationModules.modules.forEach(function (module, index) {
         if (module.amount > 0) {
-            moduleList.innerHTML += `
-                <div class="listed-module" onclick="showModuleDetails(${index}, event); toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
-                    <div class="listed-module-info" onclick="openModulePopup(${index})">${module.amount} x ${module.name}
-                    <img src="assets/img/info.svg">
-                    </div>
-                    <div class="listed-module-btns">
-                        <img src="assets/img/delete.svg" onclick="deleteModule(${index})">
-                        <img src="assets/img/add_small.svg" onclick="increaseModule(${index})">
-                        <img src="assets/img/remove_small.svg" onclick="decreaseModule(${index})">
-                    </div>
-                </div>
-            `;
+            moduleList.innerHTML += selectedModuleTemplate(index, module.amount, module.name);
         }
     });
+}
+
+
+function selectedModuleTemplate(index, amount, name) {
+    return `
+        <div class="listed-module" onclick="showModuleDetails(${index}, event); toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
+            <div class="listed-module-info" onclick="openModulePopup(${index})">${amount} x ${name}
+            <img src="assets/img/info.svg">
+            </div>
+            <div class="listed-module-btns">
+                <img src="assets/img/delete.svg" onclick="deleteModule(${index})">
+                <img src="assets/img/add_small.svg" onclick="increaseModule(${index})">
+                <img src="assets/img/remove_small.svg" onclick="decreaseModule(${index})">
+            </div>
+        </div>
+    `;
 }
 
 
