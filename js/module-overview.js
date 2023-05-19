@@ -213,6 +213,7 @@ function commaSeparator(number) {
  */
 function printDashes(location) {
     let container = document.getElementById(location);
+    location.innerHTML = "";
     for (let index = 0; index < 15; index++) {
         let delay = index * 100;
         container.innerHTML += `<span style="animation: blinking 1s infinite; animation-delay: ${delay}ms;">-</span>`;
@@ -302,10 +303,24 @@ function decreasePopupCounter(event) {
 function submitPopup(event) {
     event.stopPropagation();
     let input = document.getElementById('popupCounter');
-    stationModules.modules[selectedModuleIndex].amount = parseInt(input.value);
-    closePopup();
-    clearModuleList();
-    drawModuleList();
+    if (input.value > 1000 || input.value < 1) {
+        input.value = "min 1 max 999";
+    } else if (containsOnlyNumbers(input.value) === false) {
+        input.value = 1;
+    } else {
+        stationModules.modules[selectedModuleIndex].amount = parseInt(input.value);
+        closePopup();
+        drawModuleList();
+        calculateStationData();
+        drawStationOverview();
+        showModuleDetails(selectedModuleIndex);
+    }
+}
+
+
+function containsOnlyNumbers(input) {
+    let regex = /^[0-9]+$/;
+    return regex.test(input);
 }
 
 /**
@@ -445,4 +460,9 @@ function toggleOverview(containerHide, buttonsHide, containerShow, buttonsShow) 
     let buttonsElement2 = document.getElementById(buttonsShow);
     containerElement2.style.display = "flex";
     buttonsElement2.style.display = "flex";
+}
+
+
+function stopPropagation(event) {
+    event.stopPropagation();
 }

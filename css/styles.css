@@ -303,6 +303,7 @@ input {
     border: 2px solid #005066;
     border-radius: 0.5rem;
     padding-left: 1rem;
+    touch-action: manipulation;
 }
 
 /* Chrome, Safari, Edge, Opera */
