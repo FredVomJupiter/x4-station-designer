@@ -67,7 +67,7 @@ function drawStationOverview() {
 
 
 function clearStationOverview() {
-    let fields = ['stationTitle', 'inputsStation', 'outputsStation', 'dashesStation', 'stationDeficits', 'stationSurplus'];
+    let fields = ['stationTitle', 'surplus-right', 'deficit-left'];
     fields.forEach(field => {
         let moduleInfo = document.getElementById(field);
         moduleInfo.innerHTML = "";
@@ -86,47 +86,32 @@ function setStationTitle() {
  * Prints the calculated data for inputs and outputs onto the station overview panel.
  */
 function setStationData() {
-    handleStationInputs();
-    printDashes("dashesStation");
-    handleStationOutputs();
     drawDeficits();
-    drawSurplus();
-}
-
-
-function handleStationInputs() {
-    let input = document.getElementById('inputsStation');
-    input.innerHTML = `<span style="font-weight: bold">Input /h:</span><br>`;
-    resourcesTotal.input.forEach(resource => {
-        if (resource.amount > 0) {
-            input.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + " " + resource.name}</span>`;
-        }
-    });
-}
-
-
-function handleStationOutputs() {
-    let output = document.getElementById('outputsStation');
-    output.innerHTML = `<span style="font-weight: bold"> Output /h:</span><br>`;
-    resourcesTotal.output.forEach(resource => {
-        if (resource.amount > 0) {
-            output.innerHTML += `<span style="font-size: 0.8rem; margin-top: 0.5rem">${commaSeparator(resource.amount) + " " + resource.name}</span>`;
-        }
-    });
 }
 
 
 function drawDeficits() {
     calculateDeficits();
-    let deficitContainer = document.getElementById('stationDeficits');
-    deficitContainer.innerHTML += `<span style="font-weight: bold">Deficit /h:</span><br>`;
+    let deficitContainer = document.getElementById('deficit-left');
+    let surplusContainer = document.getElementById('surplus-right');
+    deficitContainer.innerHTML += `
+        <span>Deficit/h</span>
+    `;
+    surplusContainer.innerHTML += `
+        <span>Surplus/h</span>
+    `;
     deficit.input.forEach(entry => {
         if (entry.amount < -0) {
             deficitContainer.innerHTML += `
                 <span style="font-size: 0.8rem; margin-top: 0.5rem; color: orange">${commaSeparator(entry.amount) + " " + entry.name}</span>
             `;
+        } else if (entry.amount > 0) {
+            surplusContainer.innerHTML += `
+                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: lightgreen">${commaSeparator(entry.amount) + " " + entry.name}</span>
+            `;
         }
     });
+
 }
 
 /**
@@ -145,18 +130,5 @@ function calculateDeficits() {
 function resetDeficits() {
     deficit.input.forEach(entry => {
         entry.amount = 0;
-    });
-}
-
-
-function drawSurplus() {
-    let surplusContainer = document.getElementById('stationSurplus');
-    surplusContainer.innerHTML += `<span style="font-weight: bold">Surplus /h:</span><br>`;
-    deficit.input.forEach(entry => {
-        if (entry.amount > 0) {
-            surplusContainer.innerHTML += `
-                <span style="font-size: 0.8rem; margin-top: 0.5rem; color: lightgreen">${commaSeparator(entry.amount) + " " + entry.name}</span>
-            `;
-        }
     });
 }

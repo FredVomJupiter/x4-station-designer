@@ -377,14 +377,25 @@ img {
 
 .input-deficits {
     display: flex;
-    width: 200px;
+    width: 100%;
     height: fit-content;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     background: #005066;
     color: #E4EFF0;
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#surplus-right {
+    display: flex;
+    flex-direction: column;
+}
+
+#deficit-left {
+    display: flex;
+    flex-direction: column;
 }
 
 /* FOOTER */
