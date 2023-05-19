@@ -541,6 +541,10 @@ a:hover {
         width: 100%;
     }
 
+    .listed-module-btns {
+        display: none;
+    }
+
     .module-info {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
