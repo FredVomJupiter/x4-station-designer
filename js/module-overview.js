@@ -332,7 +332,7 @@ function drawModuleList() {
     stationModules.modules.forEach(function (module, index) {
         if (module.amount > 0) {
             moduleList.innerHTML += `
-                <div class="listed-module" onclick="showModuleDetails(${index})">
+                <div class="listed-module" onclick="showModuleDetails(${index}); toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
                     <div class="listed-module-info">${module.amount} x ${module.name}
                     <img src="assets/img/info.svg">
                     </div>
