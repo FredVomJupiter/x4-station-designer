@@ -448,7 +448,7 @@ a:hover {
         flex-direction: column;
         height: unset !important;
         max-height: fit-content;
-        margin-top: 0;
+        margin: unset;
         border-radius: unset;
     }
 
