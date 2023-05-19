@@ -78,15 +78,20 @@ main {
     border-radius: 0.5rem;
 }
 
+img {
+    border-radius: 0.5rem;
+}
+
 .button {
     cursor: pointer;
     display: flex;
     flex-direction: row;
     padding: 0.5rem 0.5rem;
     align-items: center;
+    margin-left: 0.5rem;
     height: 2.6rem;
     width: 100%;
-    background: #4E7988;
+    background: #121212;
     color: #E4EFF0;
     user-select: none;
 }
