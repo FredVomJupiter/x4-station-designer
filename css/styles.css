@@ -550,6 +550,10 @@ a:hover {
         border-top-right-radius: 0;
     }
 
+    .transform-left {
+        transform: rotate(0deg);
+    }
+
     .station-info {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
