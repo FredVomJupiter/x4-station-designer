@@ -1,6 +1,8 @@
 /***************************************************************************************
  * SECTION module selection list.
  **************************************************************************************/
+let selectedModuleIndex; // index of the selected module in the stationModules array.
+
 
 function getAllModules() {
     clearListOfModules();
@@ -105,7 +107,7 @@ function highlightButton(selectedButton) {
  */
 function getOptionHTMLTemplate(index) {
     return `
-            <div class="option" value="${stationModules.modules[index].name}" onclick="addSingleModule(${index}); showModuleDetails(${index})">
+            <div class="option" value="${stationModules.modules[index].name}" onclick="openModulePopup(${index}); showModuleDetails(${index})">
             ${stationModules.modules[index].name}</div>
         `;
 }
@@ -229,12 +231,13 @@ function clearModulInfo() {
 }
 
 /**
- * Adds a single module to the module list in the middle.
+ * Opens the popup and fills it with the module name and amount.
  * @param {*} index as number.
  */
-function addSingleModule(index) {
+function openModulePopup(index) {
     openPopup();
-    setPopupModuleName(index);
+    setPopupModuleValues(index);
+    selectedModuleIndex = index;
 }
 
 
@@ -251,13 +254,26 @@ function closePopup() {
     input.value = 1;
 }
 
-
-function setPopupModuleName(index) {
+/**
+ * Prints the module name and amount into the popup. If 0 modules of a kind
+ * exist, the amount is set to 1.
+ * @param {*} index as number.
+ */
+function setPopupModuleValues(index) {
     let moduleName = document.getElementById('popupModuleName');
     moduleName.innerHTML = stationModules.modules[index].name;
+    let input = document.getElementById('popupCounter');
+    if (stationModules.modules[index].amount === 0) {
+        input.value = 1;
+    } else {
+        input.value = stationModules.modules[index].amount;
+    }
 }
 
-
+/**
+ * Maximum number of modules is 999.
+ * @param {*} event 
+ */
 function increasePopupCounter(event) {
     event.stopPropagation();
     let input = document.getElementById('popupCounter');
@@ -266,7 +282,10 @@ function increasePopupCounter(event) {
     }
 }
 
-
+/**
+ * Minimum number of modules is 1.
+ * @param {*} event 
+ */
 function decreasePopupCounter(event) {
     event.stopPropagation();
     let input = document.getElementById('popupCounter');
@@ -275,6 +294,19 @@ function decreasePopupCounter(event) {
     }
 }
 
+/**
+ * Writes the amount of modules into the stationModules.modules array.
+ * Clears and draws the list of selected modules.
+ * @param {*} event 
+ */
+function submitPopup(event) {
+    event.stopPropagation();
+    let input = document.getElementById('popupCounter');
+    stationModules.modules[selectedModuleIndex].amount = parseInt(input.value);
+    closePopup();
+    clearModuleList();
+    drawModuleList();
+}
 
 /**
  * Only draws modules from stationModules.modules with amount > 0  into the moduleList.
