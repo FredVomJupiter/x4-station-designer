@@ -107,7 +107,7 @@ function highlightButton(selectedButton) {
  */
 function getOptionHTMLTemplate(index) {
     return `
-            <div class="option" value="${stationModules.modules[index].name}" onclick="openModulePopup(${index}); showModuleDetails(${index})">
+            <div class="option" value="${stationModules.modules[index].name}" onclick="openModulePopup(${index}); showModuleDetails(${index}, event)">
             ${stationModules.modules[index].name}</div>
         `;
 }
@@ -129,7 +129,8 @@ function clearListOfModules() {
  * Fills the module info container in the middle. Delegates subtasks to helper functions.
  * @param {*} index as number.
  */
-function showModuleDetails(index) {
+function showModuleDetails(index, event) {
+    if (event) event.stopPropagation();
     clearModulInfo();
     setModuleTitle(index);
     showHiddenInputOutput();
@@ -332,7 +333,7 @@ function drawModuleList() {
     stationModules.modules.forEach(function (module, index) {
         if (module.amount > 0) {
             moduleList.innerHTML += `
-                <div class="listed-module" onclick="showModuleDetails(${index}); toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
+                <div class="listed-module" onclick="showModuleDetails(${index}, event); toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule'); openModulePopup(${index})">
                     <div class="listed-module-info">${module.amount} x ${module.name}
                     <img src="assets/img/info.svg">
                     </div>
