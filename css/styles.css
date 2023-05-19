@@ -74,7 +74,6 @@ main {
 .modul-buttons-container {
     display: flex;
     flex-direction: column;
-    width: 20%;
     border-radius: 0.5rem;
 }
 
@@ -88,10 +87,9 @@ img {
     flex-direction: row;
     padding: 0.5rem 0.5rem;
     align-items: center;
-    margin-left: 0.5rem;
     height: 2.6rem;
-    width: 100%;
-    background: #121212;
+    width: fit-content;
+    background: #005066;
     color: #E4EFF0;
     user-select: none;
 }
@@ -121,7 +119,7 @@ img {
     flex-direction: column;
     gap: 0.25rem;
     height: 100%;
-    width: 80%;
+    width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     background: #E4EFF0;
@@ -450,13 +448,9 @@ a:hover {
         overflow-y: scroll;
     }
 
-    .modul-buttons-container {
-        width: 25%;
-    }
-
     .modul-selection-container {
         border-left: none;
-        width: 75%;
+        width: 100%;
     }
 
     .module-info {
