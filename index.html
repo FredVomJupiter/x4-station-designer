@@ -126,6 +126,20 @@
             </div>
         </footer>
     </main>
+
+    <div class="popup d-none" id="popup" onclick="closePopup()">
+        <div class="popup-menu">
+            <span id="popupModuleName">Module Name</span>
+            <div class="popup-buttons">
+                <div class="popup-button" onclick="decreasePopupCounter(event)">- 1</div>
+                <div class="popup-button" onclick="increasePopupCounter(event)">+ 1</div>
+            </div>
+            <input id="popupCounter" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="min 1 max 999" value="1">
+            <div class="popup-buttons">
+                <div class="popup-button" onclick="closePopup()">Cancel</div>
+                <div class="popup-button" onclick="submitPopup(event)">Ok</div>
+        </div>
+    </div>
     
 </body>
 

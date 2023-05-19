@@ -233,11 +233,48 @@ function clearModulInfo() {
  * @param {*} index as number.
  */
 function addSingleModule(index) {
-    stationModules.modules[index].amount++;
-    calculateStationData();
-    drawModuleList();
-    drawStationOverview();
+    openPopup();
+    setPopupModuleName(index);
 }
+
+
+function openPopup() {
+    let popup = document.getElementById('popup');
+    popup.classList.remove('d-none');
+}
+
+
+function closePopup() {
+    let popup = document.getElementById('popup');
+    popup.classList.add('d-none');
+    let input = document.getElementById('popupCounter');
+    input.value = 1;
+}
+
+
+function setPopupModuleName(index) {
+    let moduleName = document.getElementById('popupModuleName');
+    moduleName.innerHTML = stationModules.modules[index].name;
+}
+
+
+function increasePopupCounter(event) {
+    event.stopPropagation();
+    let input = document.getElementById('popupCounter');
+    if (input.value < 1000) {
+        input.value++;
+    }
+}
+
+
+function decreasePopupCounter(event) {
+    event.stopPropagation();
+    let input = document.getElementById('popupCounter');
+    if (input.value > 1) {
+        input.value--;
+    }
+}
+
 
 /**
  * Only draws modules from stationModules.modules with amount > 0  into the moduleList.
