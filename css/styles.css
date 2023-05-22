@@ -527,22 +527,6 @@ input:focus {
     background-position: center;
 }
 
-.slide-button:hover {
-    transition: all 125ms ease-in-out;
-    background: #78CCE2;
-    background-image: url('../assets/img/up.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.transform-left {
-    transform: rotate(270deg);
-}
-
-.transform-right {
-    transform: rotate(90deg);
-}
-
 .info-button {
     display: flex;
     align-items: center;
@@ -554,6 +538,37 @@ input:focus {
     background-image: url('../assets/img/up_white.svg');
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.bg-arrow {
+    width: 44px;
+    height: 44px;
+}
+
+.fg-arrow {
+    transition: all 1s ease-in-out;
+    position: absolute;
+    left: -4px;
+}
+
+.faceup {
+    transform: rotate(-90deg);
+}
+
+.fg-arrow:hover {
+    transition: all 1s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.faceleft {
+    transform: rotate(180deg);
+}
+
+.arrow-container {
+    position: relative;
+    display:flex;
+    cursor:pointer;
+    align-items:center;
 }
 
 /* Station overview Input-Output of all modules */
@@ -694,10 +709,6 @@ a:hover {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
         background: linear-gradient(180deg, #002D40 0%, #005066 100%);
-    }
-
-    .transform-left {
-        transform: rotate(0deg);
     }
 
     .station-info {

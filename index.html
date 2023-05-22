@@ -29,13 +29,26 @@
             <!-- Left Box -->
             <div class="box">
                 <div class="modul-buttons-container">
-                    <div class="button border-radius-top" id="all" onclick="getAllModules()"><img class="scale" src="./assets/img/button/all.svg" alt="all"></div>
-                    <div class="button" id="energy" onclick="getEnergyModules()"><img class="scale" src="./assets/img/button/bg_energy.svg" alt="energy"><img class="rotate smaller" src="assets/img/button/fg_energy.svg" alt="energy"></div>
-                    <div class="button" id="refined" onclick="getRefinedModules()"><img class="scale" src="./assets/img/button/bg_refined.svg" alt="refined"><img class="move" src="assets/img/button/fg_refined.svg" alt="refined"></div>
-                    <div class="button" id="food" onclick="getFoodModules()"><img class="scale" src="./assets/img/button/bg_food.svg" alt="food"><img class="move smaller" src="assets/img/button/fg_food.svg" alt="food"></div>
-                    <div class="button" id="hitech" onclick="getHighTechModules()"><img class="scale" src="./assets/img/button/bg_hightech.svg" alt="hightech"><img class="rotate" src="assets/img/button/fg_hightech.svg" alt="hightech"></div>
-                    <div class="button" id="medical" onclick="getMedicalModules()"><img class="scale" src="./assets/img/button/bg_pharma.svg" alt="pharma"><img class="rotate smaller" src="assets/img/button/fg_pharma.svg" alt="pharma"></div>
-                    <div class="button border-radius-bottom" id="shiptech" onclick="getShipTechModules()"><img class="scale" src="./assets/img/button/bg_shiptech.svg" alt="shiptech"><img class="rotate" src="assets/img/button/fg_shiptech.svg" alt="shiptech"></div>
+                    <div class="button border-radius-top" id="all" onclick="getAllModules()"><img class="scale"
+                            src="./assets/img/button/all.svg" alt="all"></div>
+                    <div class="button" id="energy" onclick="getEnergyModules()"><img class="scale"
+                            src="./assets/img/button/bg_energy.svg" alt="energy"><img class="rotate smaller"
+                            src="assets/img/button/fg_energy.svg" alt="energy"></div>
+                    <div class="button" id="refined" onclick="getRefinedModules()"><img class="scale"
+                            src="./assets/img/button/bg_refined.svg" alt="refined"><img class="move"
+                            src="assets/img/button/fg_refined.svg" alt="refined"></div>
+                    <div class="button" id="food" onclick="getFoodModules()"><img class="scale"
+                            src="./assets/img/button/bg_food.svg" alt="food"><img class="move smaller"
+                            src="assets/img/button/fg_food.svg" alt="food"></div>
+                    <div class="button" id="hitech" onclick="getHighTechModules()"><img class="scale"
+                            src="./assets/img/button/bg_hightech.svg" alt="hightech"><img class="rotate"
+                            src="assets/img/button/fg_hightech.svg" alt="hightech"></div>
+                    <div class="button" id="medical" onclick="getMedicalModules()"><img class="scale"
+                            src="./assets/img/button/bg_pharma.svg" alt="pharma"><img class="rotate smaller"
+                            src="assets/img/button/fg_pharma.svg" alt="pharma"></div>
+                    <div class="button border-radius-bottom" id="shiptech" onclick="getShipTechModules()"><img
+                            class="scale" src="./assets/img/button/bg_shiptech.svg" alt="shiptech"><img class="rotate"
+                            src="assets/img/button/fg_shiptech.svg" alt="shiptech"></div>
                 </div>
                 <div class="modul-selection-container" id="modulesSelection">
 
@@ -45,8 +58,10 @@
             <!-- Middle Box -->
             <div class="box">
                 <div class="module-counter-container" id="moduleList">
-                    <div style="display: flex; flex-direction: row; position: absolute; top: 2rem; left: 2rem; align-items: center; gap: 0.5rem; color: #005066">
-                        <img class="info-button transform-left" src="./assets/img/up_white.svg">
+                    <div
+                        style="display: flex; flex-direction: row; position: absolute; top: 2rem; left: 2rem; align-items: center; gap: 0.5rem; color: #005066">
+                        <img class="bg-arrow faceleft" src="./assets/img/bg_arrow.svg" alt="arrow">
+                        <img class="fg-arrow" src="./assets/img/fg_arrow.svg" alt="arrow">
                         <span class="orange">Click on a module to add it to the station.</span>
                     </div>
                 </div>
@@ -63,7 +78,10 @@
 
                     <div class="slide-button-container-module" id="slideButtonModule">
                         Show Station Overview
-                        <div class="slide-button transform-right" onclick="toggleOverview('moduleInfo', 'slideButtonModule', 'stationInfo', 'slideButtonStation')">
+                        <div class="arrow-container">
+                            <img class="bg-arrow" src="./assets/img/bg_arrow.svg" alt="arrow">
+                            <img img class="fg-arrow" src="./assets/img/fg_arrow.svg" alt="arrow"
+                                onclick="toggleOverview('moduleInfo', 'slideButtonModule', 'stationInfo', 'slideButtonStation')">
                         </div>
                     </div>
 
@@ -100,8 +118,12 @@
 
                     <div class="slide-button-container-station" id="slideButtonStation">
                         Show Module Overview
-                        <div class="slide-button transform-right" onclick="toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
+                        <div class="arrow-container">
+                            <img class="bg-arrow" src="./assets/img/bg_arrow.svg" alt="arrow">
+                            <img img class="fg-arrow" src="./assets/img/fg_arrow.svg" alt="arrow"
+                                onclick="toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
                         </div>
+
                     </div>
 
                     <div class="input-output-container" style="gap: 2rem">
@@ -129,19 +151,20 @@
     </main>
 
     <div class="popup d-none" id="popup" onclick="closePopup()">
-        <div class="popup-menu"  onclick="stopPropagation(event)">
+        <div class="popup-menu" onclick="stopPropagation(event)">
             <span id="popupModuleName">Module Name</span>
             <div class="popup-buttons">
                 <div class="popup-button popup-decrease" onclick="decreasePopupCounter(event)"></div>
                 <div class="popup-button popup-increase" onclick="increasePopupCounter(event)"></div>
             </div>
-            <input id="popupCounter" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="min 1 max 999" value="1" onclick="stopPropagation(event)">
+            <input id="popupCounter" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="min 1 max 999"
+                value="1" onclick="stopPropagation(event)">
             <div class="popup-buttons">
                 <div class="popup-button thinner popup-bg" onclick="closePopup()">Cancel</div>
                 <div class="popup-button thinner popup-bg" onclick="submitPopup(event)">Ok</div>
+            </div>
         </div>
-    </div>
-    
+
 </body>
 
 </html>
