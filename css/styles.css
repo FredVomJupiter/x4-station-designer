@@ -58,7 +58,7 @@ main {
     height: 72vh;
     max-height: 640px;
     max-width: 1920px;
-    background: #002439;
+    background: linear-gradient(90deg, #002D40 0%, #005066 100%);
     border-radius: 1rem;
     margin: 1rem 0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -78,17 +78,39 @@ main {
 }
 
 img {
-    border-radius: 0.5rem;
+    width: 50px;
+}
+
+.scale {
+    transition: all 225ms ease-in-out;
+    width: 50px;
+    position: absolute;
+}
+
+.rotate {
+    transition: all 500ms ease-in-out;
+    width: 30px;
+    position: absolute;
+}
+
+.move {
+    transition: all 500ms ease-in-out;
+    width: 30px;
+    position: absolute;
+}
+
+.smaller {
+    width: 22.6px;
 }
 
 .button {
     cursor: pointer;
     display: flex;
-    flex-direction: row;
     padding: 0.5rem 0.5rem;
     align-items: center;
+    justify-content: center;
     height: 2.6rem;
-    width: fit-content;
+    width: 56px;
     background: #005066;
     color: #E4EFF0;
     user-select: none;
@@ -98,6 +120,21 @@ img {
     transition: all 125ms ease-in-out;
     background: #78CCE2;
     color: #005066;
+}
+
+.button:hover .scale {
+    transition: all 225ms ease-in-out;
+    transform: scale(1.1);
+}
+
+.button:hover .rotate {
+    transition: all 500ms ease-in-out;
+    transform: rotate(90deg);
+}
+
+.button:hover .move {
+    transition: all 500ms ease-in-out;
+    transform: translate(5px, -5px);
 }
 
 .border-radius-top {
