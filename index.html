@@ -132,13 +132,13 @@
         <div class="popup-menu"  onclick="stopPropagation(event)">
             <span id="popupModuleName">Module Name</span>
             <div class="popup-buttons">
-                <div class="popup-button" onclick="decreasePopupCounter(event)">- 1</div>
-                <div class="popup-button" onclick="increasePopupCounter(event)">+ 1</div>
+                <div class="popup-button popup-decrease" onclick="decreasePopupCounter(event)"></div>
+                <div class="popup-button popup-increase" onclick="increasePopupCounter(event)"></div>
             </div>
             <input id="popupCounter" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="min 1 max 999" value="1" onclick="stopPropagation(event)">
             <div class="popup-buttons">
-                <div class="popup-button" onclick="closePopup()">Cancel</div>
-                <div class="popup-button" onclick="submitPopup(event)">Ok</div>
+                <div class="popup-button popup-bg" onclick="closePopup()">Cancel</div>
+                <div class="popup-button popup-bg" onclick="submitPopup(event)">Ok</div>
         </div>
     </div>
     

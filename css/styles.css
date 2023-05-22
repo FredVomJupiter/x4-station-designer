@@ -327,14 +327,12 @@ img {
     display: flex;
     width: 5rem;
     height: 2rem;
-    border-radius: 0.5rem;
-    background: #005066;
-    color: #E4EFF0;
     border: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     user-select: none;
+    color: #FFFFFF;
 }
 
 input {
@@ -345,6 +343,29 @@ input {
     border-radius: 0.5rem;
     padding-left: 1rem;
     touch-action: manipulation;
+}
+
+.popup-increase {
+    background-image: url("../assets/img/popup_plus.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.popup-decrease {
+    background-image: url("../assets/img/popup_down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.popup-bg {
+    transition: all 125ms ease-in-out;
+    border-radius: 0.5rem;
+    background: #002439;
+}
+
+.popup-bg:hover {
+    transition: all 125ms ease-in-out;
+    background: #005066;
 }
 
 /* Chrome, Safari, Edge, Opera */
