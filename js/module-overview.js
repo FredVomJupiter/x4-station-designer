@@ -250,12 +250,12 @@ function selectedModuleTemplate(index, amount, name) {
     return `
         <div class="listed-module" onclick="showModuleDetails(${index}, event); toggleOverview('stationInfo', 'slideButtonStation', 'moduleInfo', 'slideButtonModule')">
             <div class="listed-module-info" onclick="openModulePopup(${index})">${amount} x ${name}
-            <img src="assets/img/info.svg">
+            <div class="info"></div>
             </div>
             <div class="listed-module-btns">
-                <img src="assets/img/delete.svg" onclick="deleteModule(${index})">
-                <img src="assets/img/add_small.svg" onclick="increaseModule(${index})">
-                <img src="assets/img/remove_small.svg" onclick="decreaseModule(${index})">
+                <div class="smaller delete-yellow" onclick="deleteModule(${index})"></div>
+                <div class="smaller add-yellow" onclick="increaseModule(${index})"></div>
+                <div class="smaller remove-yellow" onclick="decreaseModule(${index})"></div>
             </div>
         </div>
     `;
