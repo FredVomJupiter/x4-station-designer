@@ -305,7 +305,6 @@ img {
     left: calc(50% - 100px);
     width: 200px;
     height: 200px;
-    background: white;
     margin: 0 auto;
     padding: 0.5rem;
     display: flex;
@@ -314,6 +313,8 @@ img {
     align-items: center;
     border-radius: 0.5rem;
     z-index: 2;
+    background: linear-gradient(180deg, #002D40 0%, #005066 100%);
+    color: #FEBE28;
 }
 
 .popup-buttons {
@@ -326,13 +327,17 @@ img {
 .popup-button {
     display: flex;
     width: 5rem;
-    height: 2rem;
+    height: 3rem;
     border: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     user-select: none;
     color: #FFFFFF;
+}
+
+.thinner {
+    height: 2rem;
 }
 
 input {
@@ -343,18 +348,32 @@ input {
     border-radius: 0.5rem;
     padding-left: 1rem;
     touch-action: manipulation;
+    background: linear-gradient(180deg, #002D40 0%, #005066 100%);
+    color: white;
 }
 
 .popup-increase {
+    transition: all 125ms ease-in-out;
     background-image: url("../assets/img/popup_plus.svg");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .popup-decrease {
+    transition: all 125ms ease-in-out;
     background-image: url("../assets/img/popup_down.svg");
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.popup-increase:hover {
+    transition: all 125ms ease-in-out;
+    transform: scale(1.1);
+}
+
+.popup-decrease:hover {
+    transition: all 125ms ease-in-out;
+    transform: scale(1.1);
 }
 
 .popup-bg {
@@ -365,7 +384,8 @@ input {
 
 .popup-bg:hover {
     transition: all 125ms ease-in-out;
-    background: #005066;
+    background: #78CCE2;
+    color: #002439;
 }
 
 /* Chrome, Safari, Edge, Opera */
